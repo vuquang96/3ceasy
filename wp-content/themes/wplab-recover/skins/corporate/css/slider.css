@@ -1,0 +1,222 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+@supports (-ms-accelerator:true) {
+  /* line 7, slider.less */
+  .wproto-slider-container {
+    overflow: hidden;
+  }
+}
+/* line 13, slider.less */
+.ie .wproto-slider-container {
+  overflow: hidden;
+}
+/**
+	Simple arrows style change
+**/
+/* line 21, slider.less */
+.custom.tparrows {
+  width: 60px;
+  height: 60px;
+}
+/* line 25, slider.less */
+.custom.tp-leftarrow {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 33, slider.less */
+.custom.tp-rightarrow {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* line 41, slider.less */
+.custom.tparrows:before {
+  line-height: 60px;
+}
+/**
+	Slider arrows with thumbnails custom styles
+**/
+/* line 48, slider.less */
+.hades.tparrows,
+.hades.tparrows:hover:before {
+  width: 85px !important;
+  height: 85px !important;
+  background-size: 14px 14px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 55, slider.less */
+.hades.tparrows.tp-leftarrow:before,
+.hades.tparrows.tp-rightarrow:before {
+  content: '';
+}
+/* line 59, slider.less */
+.hades.tparrows:before {
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+/* line 62, slider.less */
+.hades.tparrows.tp-leftarrow {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0N3B4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTk3LjE0MSwyMjUuOTJjMC04LjA5NSwzLjA5MS0xNi4xOTIsOS4yNTktMjIuMzY2TDMwMC42ODksOS4yN2MxMi4zNTktMTIuMzU5LDMyLjM5Ny0xMi4zNTksNDQuNzUxLDAgYzEyLjM1NCwxMi4zNTQsMTIuMzU0LDMyLjM4OCwwLDQ0Ljc0OEwxNzMuNTI1LDIyNS45MmwxNzEuOTAzLDE3MS45MDljMTIuMzU0LDEyLjM1NCwxMi4zNTQsMzIuMzkxLDAsNDQuNzQ0IGMtMTIuMzU0LDEyLjM2NS0zMi4zODYsMTIuMzY1LTQ0Ljc0NSwwbC0xOTQuMjktMTk0LjI4MUMxMDAuMjI2LDI0Mi4xMTUsOTcuMTQxLDIzNC4wMTgsOTcuMTQxLDIyNS45MnoiLz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+) !important;
+}
+/* line 65, slider.less */
+.hades.tparrows.tp-leftarrow:hover:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0N3B4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZmlsbD0iI2ZjZDg0NiIgZD0iTTk3LjE0MSwyMjUuOTJjMC04LjA5NSwzLjA5MS0xNi4xOTIsOS4yNTktMjIuMzY2TDMwMC42ODksOS4yN2MxMi4zNTktMTIuMzU5LDMyLjM5Ny0xMi4zNTksNDQuNzUxLDAgYzEyLjM1NCwxMi4zNTQsMTIuMzU0LDMyLjM4OCwwLDQ0Ljc0OEwxNzMuNTI1LDIyNS45MmwxNzEuOTAzLDE3MS45MDljMTIuMzU0LDEyLjM1NCwxMi4zNTQsMzIuMzkxLDAsNDQuNzQ0IGMtMTIuMzU0LDEyLjM2NS0zMi4zODYsMTIuMzY1LTQ0Ljc0NSwwbC0xOTQuMjktMTk0LjI4MUMxMDAuMjI2LDI0Mi4xMTUsOTcuMTQxLDIzNC4wMTgsOTcuMTQxLDIyNS45MnoiLz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+) !important;
+}
+/* line 68, slider.less */
+.hades.tparrows.tp-rightarrow {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0NnB4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDYgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NiA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTM0NS40NDEsMjQ4LjI5MkwxNTEuMTU0LDQ0Mi41NzNjLTEyLjM1OSwxMi4zNjUtMzIuMzk3LDEyLjM2NS00NC43NSwwYy0xMi4zNTQtMTIuMzU0LTEyLjM1NC0zMi4zOTEsMC00NC43NDQgTDI3OC4zMTgsMjI1LjkyTDEwNi40MDksNTQuMDE3Yy0xMi4zNTQtMTIuMzU5LTEyLjM1NC0zMi4zOTQsMC00NC43NDhjMTIuMzU0LTEyLjM1OSwzMi4zOTEtMTIuMzU5LDQ0Ljc1LDBsMTk0LjI4NywxOTQuMjg0IGM2LjE3Nyw2LjE4LDkuMjYyLDE0LjI3MSw5LjI2MiwyMi4zNjZDMzU0LjcwOCwyMzQuMDE4LDM1MS42MTcsMjQyLjExNSwzNDUuNDQxLDI0OC4yOTJ6Ii8+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==) !important;
+}
+/* line 71, slider.less */
+.hades.tparrows.tp-rightarrow:hover:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0NnB4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDYgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NiA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZmlsbD0iI2ZjZDg0NiIgZD0iTTM0NS40NDEsMjQ4LjI5MkwxNTEuMTU0LDQ0Mi41NzNjLTEyLjM1OSwxMi4zNjUtMzIuMzk3LDEyLjM2NS00NC43NSwwYy0xMi4zNTQtMTIuMzU0LTEyLjM1NC0zMi4zOTEsMC00NC43NDQgTDI3OC4zMTgsMjI1LjkyTDEwNi40MDksNTQuMDE3Yy0xMi4zNTQtMTIuMzU5LTEyLjM1NC0zMi4zOTQsMC00NC43NDhjMTIuMzU0LTEyLjM1OSwzMi4zOTEtMTIuMzU5LDQ0Ljc1LDBsMTk0LjI4NywxOTQuMjg0IGM2LjE3Nyw2LjE4LDkuMjYyLDE0LjI3MSw5LjI2MiwyMi4zNjZDMzU0LjcwOCwyMzQuMDE4LDM1MS42MTcsMjQyLjExNSwzNDUuNDQxLDI0OC4yOTJ6Ii8+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==) !important;
+}
+/* line 74, slider.less */
+.hades.tparrows:hover:before {
+  background-color: #000;
+}
+/* line 77, slider.less */
+.hades.tparrows {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 80, slider.less */
+.hades .tp-arr-allwrapper {
+  width: 130px;
+  height: 85px;
+}
+/**
+	Slider thumbnails
+**/
+/* line 88, slider.less */
+.hesperiden .tp-thumb:hover .tp-thumb-title {
+  display: none;
+}
+/* line 91, slider.less */
+.hesperiden .tp-thumb .tp-thumb-image:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fcd846;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 100, slider.less */
+.hesperiden .tp-thumb-title {
+  display: none !important;
+}
+/* line 103, slider.less */
+.hesperiden .tp-thumb:hover .tp-thumb-image:before {
+  opacity: 1;
+}
+/* line 107, slider.less */
+.rev_slider > ul {
+  font-style: normal;
+  font-family: montserrat;
+}
+/**
+	Decor
+**/
+/* line 115, slider.less */
+.slider-small-corner-left-yellow {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #fcd846;
+  border-left: 2px solid #fcd846;
+}
+/* line 121, slider.less */
+.slider-small-corner-right-yellow {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #fcd846;
+  border-right: 2px solid #fcd846;
+}
+/* line 127, slider.less */
+.slider-small-corner-right-bottom-yellow {
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #fcd846;
+  border-right: 2px solid #fcd846;
+}
+/* line 133, slider.less */
+.slider-small-corner-left-bottom-yellow {
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #fcd846;
+  border-left: 2px solid #fcd846;
+}
+/* line 139, slider.less */
+.slider-big-corner-left-white {
+  width: 12px;
+  height: 170px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+/* line 146, slider.less */
+.slider-big-corner-right-white {
+  width: 12px;
+  height: 170px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+/* line 153, slider.less */
+.slider-line-white {
+  width: 170px;
+  height: 2px;
+  background: #fff;
+}
+/* line 158, slider.less */
+.slider-line-yellow {
+  width: 170px;
+  height: 2px;
+  background: #fcd846;
+}
+/* line 163, slider.less */
+.slider-small-corner-left-blue {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #00bff3;
+  border-left: 2px solid #00bff3;
+}
+/* line 169, slider.less */
+.slider-small-corner-right-blue {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #00bff3;
+  border-right: 2px solid #00bff3;
+}
+/* line 175, slider.less */
+.slider-small-corner-right-bottom-blue {
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #00bff3;
+  border-right: 2px solid #00bff3;
+}
+/* line 181, slider.less */
+.slider-small-corner-left-bottom-blue {
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #00bff3;
+  border-left: 2px solid #00bff3;
+}

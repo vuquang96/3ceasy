@@ -1,0 +1,211 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/**	
+	Modern header styles
+**/
+/* line 10, head-modern.less */
+.header-modern #header-wrapper.default-tpl {
+  min-height: 635px;
+  background-color: #111111;
+  background-position: center bottom;
+}
+/* line 15, head-modern.less */
+.header-modern #header-wrapper.default-tpl + .page-corners {
+  margin: 0 auto;
+  max-width: 1330px;
+  z-index: 11;
+  position: relative;
+  margin-top: -295px;
+}
+/* line 22, head-modern.less */
+.header-modern #content-wrapper.default-tpl {
+  max-width: 1330px;
+  margin: 0 auto 80px auto;
+  background-color: #ffffff;
+  min-height: 295px;
+  z-index: 11;
+  position: relative;
+}
+/* line 30, head-modern.less */
+.header-modern #header-wrapper.default-tpl + .page-corners {
+  height: 80px;
+  position: relative;
+}
+/* line 34, head-modern.less */
+.header-modern #header-wrapper.default-tpl + .page-corners:before,
+.header-modern #header-wrapper.default-tpl + .page-corners:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+/* line 41, head-modern.less */
+.header-modern #header-wrapper.default-tpl + .page-corners:before {
+  right: 80px;
+  left: 0;
+  background-color: #ffffff;
+}
+/* line 46, head-modern.less */
+.header-modern #header-wrapper.default-tpl + .page-corners:after {
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 0 0 80px;
+  border-color: transparent transparent transparent #e1e1e1;
+}
+/* line 54, head-modern.less */
+body.rtl.header-modern #header-wrapper.default-tpl + .page-corners:after {
+  border-color: transparent #e1e1e1 transparent transparent;
+}
+@media screen and (max-width: 992px) {
+  /* line 58, head-modern.less */
+  .header-modern #header-wrapper.default-tpl {
+    min-height: 1px;
+  }
+  /* line 61, head-modern.less */
+  .header-modern .page-corners {
+    display: none;
+  }
+  /* line 64, head-modern.less */
+  .header-modern #content-wrapper.default-tpl {
+    padding-top: 80px;
+  }
+}
+/* line 69, head-modern.less */
+.header-modern #header,
+.header-modern #page-header {
+  position: relative;
+  z-index: 11;
+}
+/* line 73, head-modern.less */
+#menu-container {
+  z-index: 100;
+}
+/* line 76, head-modern.less */
+.header-modern #page-header {
+  padding-top: 120px;
+  padding-bottom: 70px;
+}
+/* line 79, head-modern.less */
+.header-modern #page-header h2,
+.header-modern #page-header h1 {
+  font-size: 48px;
+  line-height: 1.35em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* line 86, head-modern.less */
+.header-modern #page-header .header-cta {
+  margin-top: 35px;
+}
+@media screen and (max-width: 992px) {
+  /* line 92, head-modern.less */
+  .header-modern #page-header h2,
+  .header-modern #page-header h1 {
+    font-size: 33px;
+  }
+  /* line 95, head-modern.less */
+  .header-modern #page-header {
+    margin-bottom: 0;
+  }
+  /* line 98, head-modern.less */
+  .header-modern #page-header .header-cta {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* line 106, head-modern.less */
+  .header-modern #page-header {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+/* line 112, head-modern.less */
+.header-modern .breadcrumbs {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #7d7d7d;
+}
+/* line 116, head-modern.less */
+.header-modern .breadcrumbs a {
+  color: #7d7d7d;
+}
+/* line 119, head-modern.less */
+.header-modern .breadcrumbs a:hover {
+  color: #fcd846;
+}
+/* line 122, head-modern.less */
+.header-modern .breadcrumbs .separator {
+  display: none;
+}
+/* line 125, head-modern.less */
+.header-modern .breadcrumbs span {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 7px 20px 7px 10px;
+}
+/* line 131, head-modern.less */
+.header-modern .breadcrumbs span:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  left: 0;
+  top: 13px;
+}
+/* line 139, head-modern.less */
+.header-modern .breadcrumbs .last-item {
+  background-color: rgba(17, 17, 17, 0.5);
+  padding-right: 10px;
+  font-weight: bold;
+  color: #fcd846;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+/* line 149, head-modern.less */
+.header-modern .breadcrumbs .last-item:before,
+.header-modern .breadcrumbs .corner:before {
+  display: none;
+}
+/* line 152, head-modern.less */
+.header-modern .breadcrumbs .corner {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 10px;
+  border-color: transparent transparent transparent rgba(17, 17, 17, 0.5);
+}
+/* line 162, head-modern.less */
+body.rtl.header-modern .breadcrumbs .corner {
+  border-color: transparent rgba(17, 17, 17, 0.5) transparent transparent;
+}
+@media screen and (max-width: 767px) {
+  /* line 168, head-modern.less */
+  .header-modern .breadcrumbs .last-item {
+    background-color: transparent;
+    font-weight: normal;
+  }
+  /* line 172, head-modern.less */
+  .header-modern .breadcrumbs .last-item:before {
+    display: block;
+  }
+  /* line 175, head-modern.less */
+  .header-modern .breadcrumbs .last-item:after,
+  .header-modern .breadcrumbs .corner {
+    display: none;
+  }
+}

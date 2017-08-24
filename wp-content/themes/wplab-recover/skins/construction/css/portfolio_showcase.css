@@ -1,0 +1,117 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 7, portfolio_showcase.less */
+.portfolio-showcase .swiper-slide {
+  width: 640px;
+  cursor: move;
+}
+/* line 11, portfolio_showcase.less */
+.portfolio-showcase .item-inside {
+  float: left;
+  position: relative;
+}
+/* line 14, portfolio_showcase.less */
+.portfolio-showcase .item-inside img {
+  display: block;
+}
+/* line 18, portfolio_showcase.less */
+.portfolio-showcase .view,
+.portfolio-showcase .link-project {
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 10px;
+}
+/* line 27, portfolio_showcase.less */
+.portfolio-showcase .title {
+  display: block;
+}
+/* line 29, portfolio_showcase.less */
+.portfolio-showcase .title h4 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 300;
+}
+/* line 37, portfolio_showcase.less */
+.portfolio-showcase .cats {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 18px;
+}
+/* line 41, portfolio_showcase.less */
+.portfolio-showcase .cats a {
+  color: #898989;
+}
+/* line 44, portfolio_showcase.less */
+.portfolio-showcase .cats a:hover {
+  color: #fcd846;
+}
+/* line 48, portfolio_showcase.less */
+.portfolio-showcase .title:hover h4 {
+  color: #fcd846;
+}
+/* line 51, portfolio_showcase.less */
+.portfolio-showcase .title + .links {
+  margin-top: 18px;
+}
+/* line 54, portfolio_showcase.less */
+.portfolio-showcase .caption {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 25px 0 25px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+/* line 66, portfolio_showcase.less */
+.portfolio-showcase .caption .caption-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+/* line 71, portfolio_showcase.less */
+.portfolio-showcase .caption .caption-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 78, portfolio_showcase.less */
+.portfolio-showcase .item-inside:hover .caption {
+  opacity: 1;
+}
+@media screen and (max-width: 480px) {
+  /* line 86, portfolio_showcase.less */
+  .portfolio-showcase .swiper-slide,
+  .portfolio-showcase .item-inside {
+    width: 320px;
+  }
+  /* line 89, portfolio_showcase.less */
+  .portfolio-showcase .item-num-2,
+  .portfolio-showcase .item-num-3 {
+    width: 160px;
+  }
+  /* line 92, portfolio_showcase.less */
+  .portfolio-showcase .title,
+  .portfolio-showcase .cats {
+    display: none;
+  }
+}

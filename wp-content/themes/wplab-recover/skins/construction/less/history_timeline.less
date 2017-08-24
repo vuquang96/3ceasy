@@ -1,0 +1,68 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.history-timeline {
+	margin-bottom: 30px;
+	width: 100%;
+	.item {
+		padding-left: 200px;
+		position: relative;
+		margin-bottom: 35px;
+		padding-bottom: 35px;
+		border-bottom: 1px solid @color_accent_grey;
+	}
+	.item:last-of-type {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.time {
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: @color_accent_yellow;
+		.fontSize( @h1_font_font_size );
+		.lineHeight( @h1_font_line_height );
+		font-weight: 100;
+	}
+	.time:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -20px;
+		width: 30px;
+		height: 2px;
+		background: @color_accent_black;
+		.transition( width 0.2s ); 
+	}
+	.item:hover .time:after {
+		background: @color_accent_yellow;
+		width: 100%;
+	}
+	h4 {
+		.fontSize( @h5_font_font_size );
+		.lineHeight( @h5_font_line_height );
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-bottom: 18px;
+		padding-top: 10px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.history-timeline {
+		.time {
+			.fontSize( 30 );
+			position: relative;
+			margin-bottom: 20px;
+		}
+		.time:after {
+			bottom: -5px;
+		}
+		.item {
+			padding-left: 0;
+		}
+	}
+}

@@ -1,0 +1,91 @@
+// theme vars
+@import "vars.less";
+// LESS functions
+@import "../../../css/mixins.less";
+
+.shop-products-shortcode-list {
+	margin: 0 0 30px 0;
+	padding: 0;
+	ul.products {
+		margin: 0 !important;
+	}
+	ul.products li {
+		margin: 0 0 50px 0;
+		padding: 0 0 50px 0;
+		border-bottom: 1px solid darken( @color_accent_grey, 5% );
+		position: relative;
+		padding-left: 300px;
+		min-height: 300px;
+		display: block;
+		width: auto !important;
+	}
+	ul.products li:last-of-type {
+		border-bottom: 0;
+	}
+	.thumb {
+		width: 250px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.title {
+		.fontSize( @h6_font_font_size );
+		.lineHeight( @h6_font_line_height );
+		text-transform: uppercase;
+		margin-bottom: 14px;
+		font-weight: 400;
+		a {
+			color: @color_accent_black;
+		}
+		a:hover {
+			color: @color_accent_yellow;
+		}
+	}
+	.amount {
+		.increase-font-size( @primary_font_font_size, 4 );
+	}
+	.product-rating {
+		float: right;
+	}
+	.product-price {
+		float: left;
+	}
+	header {
+		margin-bottom: 10px !important;
+	}
+	.onsale {
+		left: 0 !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.shop-products-shortcode-list {
+		.title {
+			.fontSize( @h6_font_font_size_mobile );
+			.lineHeight( @h6_font_line_height_mobile );
+		}
+		.product-rating, .product-price {
+			float: none;
+			display: block;
+		}
+		.thumb {
+			width: 100px;
+		}
+		ul.products li {
+			padding-left: 120px;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.shop-products-shortcode-list {
+		.thumb {
+			width: auto;
+			position: static;
+			margin-bottom: 25px;
+		}
+		ul.products li {
+			padding-left: 0;
+		}
+	}
+}

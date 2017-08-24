@@ -1,0 +1,319 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+/**
+	Shared menu styles
+**/
+
+#menu-container {
+	position: relative;
+	z-index: 110;
+	background: @color_accent_black;
+}
+
+#header {
+	text-align: center;
+	.logo {
+		display: inline-block;
+	}
+	.logo {
+		padding-bottom: 30px;
+		padding-top: 20px;
+	}
+	.logo.logo-title {
+		color: @color_accent_inner_inverted;
+		position: relative;
+		font-weight: 400;
+		.fontSize( @h4_font_font_size );
+	}
+	.logo.logo-title-tagline {
+		position: relative;
+		line-height: normal;
+		color: @color_accent_inner_inverted;
+		span {
+			display: block;
+		}
+		.title {
+			font-weight: 400;
+			.fontSize( @h4_font_font_size );
+		}
+		.tagline {
+			.decrease-font-size( @primary_font_font_size, 2 );
+			color: @text_color;
+		}
+	}
+	.logo.logo-title:first-letter, .logo.logo-title-tagline .title:first-letter {
+		color: @color_accent_yellow;
+	}
+	ul#header-menu, ul.sub-menu {
+		list-style: none;
+		.fontFamilyPrimary( @primary_font_font_family );
+		font-style: normal;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#header-menu-inner {
+	position: relative;
+	z-index: 21;
+}
+
+#header-menu {
+	text-align: left;
+}
+
+/**
+	Styles for desktop screens
+**/
+
+@media screen and (min-width: 1199px) {
+	#header ul#header-menu {
+		display: block;
+		text-align: center;
+		> li {
+			display: inline-block;
+			position: relative;
+			margin: 0 20px 0 0;
+			padding: 0;
+			.decrease-font-size( @primary_font_font_size, 2 );
+		}
+		> li:last-of-type {
+			margin-right: 0;
+		}
+		> li > a > .menu-text {
+			position: relative;
+		}
+		> li > a {
+			color: @text_color;
+			font-weight: 400;
+			position: relative;
+			display: block;
+			padding-bottom: 35px;
+		}
+		> li > a > .menu-text:before {
+	    content: '';
+	    position: absolute;
+	    bottom: -7px;
+	    left: 0;
+	    width: 100%;
+	    height: 2px;
+	    background: @color_accent_yellow;
+	    -webkit-transform: scale3d(0, 1, 1);
+	    transform: scale3d(0, 1, 1);
+	    -webkit-transition: -webkit-transform 0.1s;
+	    transition: transform 0.1s;
+		}
+		> li:hover > a, > li.current-menu-item > a, > li.current-menu-parent > a, > li.current-menu-ancestor > a {
+			color: @color_accent_yellow;
+		}
+		> li:hover > a > .menu-text:before, > li.current-menu-item > a > .menu-text:before, > li.current-menu-parent > a > .menu-text:before,
+		> li.current-menu-ancestor > a > .menu-text:before {
+	    -webkit-transform: scale3d(1, 1, 1);
+	    transform: scale3d(1, 1, 1);
+	    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	    -webkit-transition-duration: 0.3s;
+	    transition-duration: 0.3s;
+		}
+		ul.sub-menu {
+			display: none;
+			position: absolute;
+			z-index: 21;
+			opacity: 0;
+		}
+		ul.sub-menu.hovered {
+			display: block;
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	#header {
+		.logo {
+			padding-top: 20px;
+		}		
+	}	
+}
+
+/**
+	Widget buttons
+**/
+#mobile-menu-toggler {
+	display: none;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top: 50%;
+	margin-top: -12px;
+	.transform( rotate(0deg) );
+	.transition( .5s ease-in-out );
+	cursor: pointer;
+	span {
+	  display: block;
+	  position: absolute;
+	  height: 3px;
+	  width: 100%;
+	  background: @color_accent_inner_inverted;
+	  opacity: 1;
+	  left: 0;
+	  .transform( rotate(0deg) );
+	  .transition( .25s ease-in-out );
+	  .rounded( 3px );
+	}
+}
+
+#mobile-menu-toggler span:nth-child(1) {
+  top: 0px;
+}
+#mobile-menu-toggler span:nth-child(2),#mobile-menu-toggler span:nth-child(3) {
+  top: 9px;
+}
+#mobile-menu-toggler span:nth-child(4) {
+  top: 18px;
+}
+#mobile-menu-toggler.dl-active span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+#mobile-menu-toggler.dl-active span:nth-child(2) {
+  .transform( rotate(45deg) );
+}
+#mobile-menu-toggler.dl-active span:nth-child(3) {
+  .transform( rotate(-45deg) );
+}
+#mobile-menu-toggler.dl-active span:nth-child(4) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+
+#header-cart-widget {
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	.inside {
+		width: 370px;
+	}
+}
+@media screen and (max-width: 767px) {
+	#header-cart-widget .inside {
+		width: 300px;	
+	}
+}
+#header-search-widget {
+	position: absolute;
+	left: 15px;
+	top: 30px;
+}
+#header-cart-widget .inside, #header-search-widget .inside {
+	display: none;
+}
+#header-cart-widget-toggle, #header-search-widget-toggle {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#header-cart-widget-toggle {
+	.img-cart( @color_accent_inner_inverted );
+	background-size: 24px 24px;
+	background-position: 18px center;
+	width: 80px;
+	span {
+		color: @color_accent_inner_inverted;
+		display: block;
+		padding-left: 40px;
+	} 
+}
+#header-cart-widget-toggle:hover {
+	.img-cart( @color_accent_yellow );
+	span {
+		color: @color_accent_yellow;
+	}
+}
+#header-search-widget-toggle {
+	.img-search( @color_accent_inner_inverted );
+}
+#header-search-widget-toggle:hover {
+	.img-search( @color_accent_yellow );
+}
+@media screen and (max-width: 1199px) {
+	#mobile-menu-toggler {
+		position: absolute;
+		right: 15px;
+		display: block;
+	}
+	#header-search-widget-toggle {
+		display: block;
+	}
+	#header-cart-widget, #header-search-widget {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#header .logo {
+		text-align: left;
+	}
+}
+
+body.rtl #header-menu {
+	text-align: right;
+}
+
+@media screen and (min-width: 1199px) {
+	body.rtl #header ul#header-menu {
+		> li {
+			margin: 0 0 0 20px;
+		}
+		> li:last-of-type {
+			margin-left: 0;
+		}
+		> li > a > .menu-text:before {
+	    right: 0;
+	    left: auto;
+		}
+	}
+}
+
+body.rtl #mobile-menu-toggler {
+
+	span {
+	  right: 0;
+	  left: auto;
+	}
+}
+
+body.rtl #header-cart-widget {
+	left: 15px;
+	right: auto;
+}
+body.rtl #header-search-widget {
+	right: 15px;
+	left: auto;
+}
+body.rtl #header-cart-widget-toggle {
+	span {
+		padding-right: 40px;
+		padding-left: 0;
+	} 
+}
+@media screen and (max-width: 1199px) {
+	body.rtl #mobile-menu-toggler {
+		left: 15px;
+		right: auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body.rtl #header .logo {
+		text-align: right;
+	}
+}

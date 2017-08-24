@@ -1,0 +1,99 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.faq {
+	position: relative;
+	.text {
+		padding-left: 80px;
+		display: block;
+	}
+	.item {
+		position: relative;
+		margin-bottom: 35px;
+		padding-bottom: 35px;
+		border-bottom: 1px solid @color_accent_grey;
+	}
+	.item:last-of-type {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	h4 {
+		.fontSize( @h5_font_font_size );
+		.lineHeight( @h5_font_line_height );
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-bottom: 18px;
+		padding-top: 10px;
+	}
+	.qa {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		width: 50px;
+		.fontSize( 24 );
+		line-height: 43px;
+		text-align: center;
+		
+		span {
+			display: block;
+		}
+		.question {
+			background-color: @color_accent_black;
+			color: @color_accent_inner_inverted;
+			position: relative;
+			padding-top: 5px;
+		}
+		.question:after {
+			content: '';
+			width: 0;
+			height: 0;
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			border-style: solid;
+			border-width: 10px 25px 0 25px;
+			border-color: @color_accent_black transparent transparent transparent;
+		}
+		.answer {
+			padding-top: 10px;
+			padding-bottom: 5px;
+			background-color: @color_accent_yellow;
+			color: @color_accent_inner;
+		}
+	}
+}
+.faq.style-corporate {
+	h4 {
+		text-transform: none;	
+		font-weight: 300;
+		margin-bottom: 22px;
+	}
+	.qa {
+		.question:after {
+			display: none;	
+		}
+		.question, .answer {
+			.rounded( 5px );
+			.fontSize( 18 );
+			font-weight: 400;
+			padding: 5px;
+		}
+		.question {
+			
+		}
+		.answer {
+			margin-top: 10px;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.faq .qa {
+		display: none;	
+	}
+	.faq .text {
+		padding-left: 0;	
+	}
+}

@@ -1,0 +1,57 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, progress_bars.less */
+.progress-bar {
+  margin-bottom: 22px;
+}
+/* line 8, progress_bars.less */
+.progress-bar .progress-bar-title {
+  margin-bottom: 5px;
+}
+/* line 10, progress_bars.less */
+.progress-bar .progress-bar-title .num {
+  color: #fcd846;
+  font-size: 36px;
+  margin-right: 24px;
+}
+/* line 15, progress_bars.less */
+.progress-bar .progress-bar-title .title {
+  color: #111111;
+}
+/* line 19, progress_bars.less */
+.progress-bar .progress-bar-value-inner {
+  background-color: #f3f3f3;
+  height: 20px;
+}
+/* line 22, progress_bars.less */
+.progress-bar .progress-bar-value-inner .value {
+  height: 20px;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+  background: #fcd846;
+  background: repeating-linear-gradient(45deg, #fcd846, #fcd846 25%, #fbcd14 25%, #fbcd14 50%);
+  background-size: 20px 20px;
+}
+/* line 38, progress_bars.less */
+.progress-bar.animated .value {
+  animation: animateStripes 2s linear infinite;
+}
+@keyframes animateStripes {
+  /* line 43, progress_bars.less */
+  from {
+    background-position: 0 0;
+  }
+  /* line 44, progress_bars.less */
+  to {
+    background-position: 20px 0;
+  }
+}

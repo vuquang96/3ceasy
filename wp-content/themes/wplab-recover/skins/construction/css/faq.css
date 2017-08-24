@@ -1,0 +1,112 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, faq.less */
+.faq {
+  position: relative;
+}
+/* line 8, faq.less */
+.faq .text {
+  padding-left: 80px;
+  display: block;
+}
+/* line 12, faq.less */
+.faq .item {
+  position: relative;
+  margin-bottom: 35px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #f3f3f3;
+}
+/* line 18, faq.less */
+.faq .item:last-of-type {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 23, faq.less */
+.faq h4 {
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 18px;
+  padding-top: 10px;
+}
+/* line 31, faq.less */
+.faq .qa {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 50px;
+  font-size: 24px;
+  line-height: 43px;
+  text-align: center;
+}
+/* line 40, faq.less */
+.faq .qa span {
+  display: block;
+}
+/* line 43, faq.less */
+.faq .qa .question {
+  background-color: #111111;
+  color: #ffffff;
+  position: relative;
+  padding-top: 5px;
+}
+/* line 49, faq.less */
+.faq .qa .question:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-style: solid;
+  border-width: 10px 25px 0 25px;
+  border-color: #111111 transparent transparent transparent;
+}
+/* line 60, faq.less */
+.faq .qa .answer {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: #fcd846;
+  color: #111111;
+}
+/* line 69, faq.less */
+.faq.style-corporate h4 {
+  text-transform: none;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+/* line 75, faq.less */
+.faq.style-corporate .qa .question:after {
+  display: none;
+}
+/* line 78, faq.less */
+.faq.style-corporate .qa .question,
+.faq.style-corporate .qa .answer {
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px;
+}
+/* line 87, faq.less */
+.faq.style-corporate .qa .answer {
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  /* line 93, faq.less */
+  .faq .qa {
+    display: none;
+  }
+  /* line 96, faq.less */
+  .faq .text {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,440 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/** terms filters **/
+/* line 7, portfolio_shortcode_alt.less */
+.portfolio-shortcode-posts-filters {
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+/* line 11, portfolio_shortcode_alt.less */
+.portfolio-shortcode-posts-filters a {
+  text-transform: uppercase;
+  color: #111111;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 0 5px;
+  position: relative;
+  border-radius: 20px;
+  font-weight: 400;
+}
+/* line 21, portfolio_shortcode_alt.less */
+.portfolio-shortcode-posts-filters a:hover,
+.portfolio-shortcode-posts-filters a.current {
+  color: #ffffff;
+  background: #fcd846;
+}
+/**
+	portfolio shortcode
+**/
+/* line 30, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt {
+  margin: 0 -15px 30px -15px;
+}
+/* line 32, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt article {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 33.333333%;
+}
+/* line 38, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .inside {
+  padding: 0 15px 30px 15px;
+}
+/* line 40, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .inside img {
+  display: block;
+}
+/* line 44, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .element {
+  position: relative;
+  overflow: hidden;
+}
+/* line 48, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .view,
+.portfolio-posts-shortcode-alt .link {
+  display: inline-block;
+  width: 25px;
+  height: 18px;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 10px;
+}
+/* line 57, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .title {
+  display: block;
+}
+/* line 59, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .title h4 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-weight: 300;
+}
+/* line 67, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .title:hover h4 {
+  color: #fcd846;
+}
+/* line 70, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 25px 0 25px;
+  text-align: center;
+}
+/* line 79, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .caption .caption-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+/* line 84, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt .caption .caption-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 93, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.no-preview .view {
+  display: none;
+}
+@media screen and (max-width: 1199px) {
+  /* line 100, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt .title h4 {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 14px;
+    font-weight: 300;
+  }
+  /* line 106, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt .view {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 113, portfolio_shortcode_alt.less */
+  .portfolio-posts-filters {
+    border-bottom: 0;
+    margin-bottom: 30px;
+  }
+  /* line 116, portfolio_shortcode_alt.less */
+  .portfolio-posts-filters .current:after {
+    display: none;
+  }
+  /* line 121, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 129, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt article {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+/**
+	Full-width style
+**/
+/* line 139, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.style-full_width {
+  margin: 0;
+}
+/* line 141, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.style-full_width .inside {
+  padding: 0;
+}
+/* line 144, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.style-full_width article {
+  width: 20%;
+}
+@media screen and (max-width: 1600px) {
+  /* line 151, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt.style-full_width article {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  /* line 159, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt.style-full_width article {
+    width: 33.333333%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 167, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt.style-full_width article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 175, portfolio_shortcode_alt.less */
+  .portfolio-posts-shortcode-alt.style-full_width article {
+    width: 100%;
+  }
+}
+/**
+	Fade hover style
+**/
+/* line 185, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-fade .caption {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 190, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-fade article:hover .caption {
+  opacity: 1;
+}
+/**
+	Slide from top hover style
+**/
+/* line 200, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-slide_top .caption {
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+}
+/* line 208, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-slide_top article:hover .caption {
+  top: 0;
+}
+/**
+	Slide from right hover style
+**/
+/* line 218, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-slide_right .caption {
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1) 0s;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  right: auto;
+}
+/* line 226, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-slide_right article:hover .caption {
+  left: 0;
+}
+/**
+	Zoom hover style
+**/
+/* line 236, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-zoom .caption {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 241, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-zoom article:hover .caption {
+  opacity: 1;
+}
+/* line 244, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-zoom article:hover img {
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -moz-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/* line 257, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-zoom img {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/**
+	Clap #1 hover style
+**/
+/* line 266, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 .caption {
+  opacity: 0;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  background: transparent;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+/* line 272, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 .overlay {
+  width: 100%;
+  height: 50%;
+  left: 0px;
+  position: absolute;
+  -webkit-transition: all 0.15s linear 0.1s;
+  -moz-transition: all 0.15s linear 0.1s;
+  -o-transition: all 0.15s linear 0.1s;
+  transition: all 0.15s linear 0.1s;
+  background: rgba(0, 0, 0, 0.55);
+}
+/* line 280, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 .overlay-top {
+  top: -100%;
+}
+/* line 283, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 .overlay-bottom {
+  top: 100%;
+}
+/* line 287, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 article:hover .overlay-top {
+  top: 0px;
+}
+/* line 290, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 article:hover .overlay-bottom {
+  top: 50%;
+}
+/* line 293, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_1 article:hover .caption {
+  opacity: 1;
+}
+/**
+	Clap #2 hover style
+**/
+/* line 304, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_2 .caption {
+  opacity: 0;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  background: transparent;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -ms-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+/* line 314, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_2 .overlay {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all 0.15s linear 0.15s;
+  -moz-transition: all 0.15s linear 0.15s;
+  -o-transition: all 0.15s linear 0.15s;
+  transition: all 0.15s linear 0.15s;
+  background: rgba(0, 0, 0, 0.55);
+}
+/* line 321, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_2 .overlay-top {
+  left: 0;
+  top: -100%;
+}
+/* line 325, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_2 .overlay-bottom {
+  right: 0;
+  top: 100%;
+}
+/* line 330, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_2 article:hover .overlay {
+  top: 0px;
+}
+/* line 333, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-clap_2 article:hover .caption {
+  opacity: 1;
+}
+/**
+	Burn hover style
+**/
+/* line 344, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn .caption {
+  opacity: 0;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  background: transparent;
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+/* line 354, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.35);
+}
+/* line 367, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn .overlay-1 {
+  -webkit-transition: all 0.2s linear 0.3s;
+  -moz-transition: all 0.2s linear 0.3s;
+  -o-transition: all 0.2s linear 0.3s;
+  transition: all 0.2s linear 0.3s;
+}
+/* line 370, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn .overlay-2 {
+  -webkit-transition: all 0.2s linear 0.6s;
+  -moz-transition: all 0.2s linear 0.6s;
+  -o-transition: all 0.2s linear 0.6s;
+  transition: all 0.2s linear 0.6s;
+}
+/* line 374, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn article:hover .overlay {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* line 377, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn article:hover .overlay-1 {
+  -moz-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/* line 384, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn article:hover .overlay-2 {
+  -moz-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+/* line 391, portfolio_shortcode_alt.less */
+.portfolio-posts-shortcode-alt.hover-style-burn article:hover .caption {
+  opacity: 1;
+}

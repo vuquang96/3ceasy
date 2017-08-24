@@ -1,0 +1,23 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.logos-shortcode {
+	img, a {
+		display: block;
+	}
+	a {
+		padding: 20px;
+	}
+}
+.logos-shortcode.with-opacity {
+	img {
+		.transition( opacity 0.2s);
+		opacity: 0.3;
+		-webkit-transform: translateZ(0); /** Chrome opacity bug fix **/
+	}
+	img:hover {
+		opacity: 1;
+	}
+}

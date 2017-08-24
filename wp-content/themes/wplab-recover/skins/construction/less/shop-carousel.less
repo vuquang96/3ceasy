@@ -1,0 +1,53 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.products-carousel {
+	margin-bottom: 30px;
+	overflow-y: visible;
+	.product-ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background: none;
+	}
+	.after {
+		height: 30px;
+	}
+	li {
+		font-style: normal;
+		.fontFamilyPrimary( @primary_font_font_family );
+	}
+	h3 {
+		margin-bottom: 0;
+		.fontSize( @h6_font_font_size );
+		line-height: 1.35em;
+	}
+	.inside {
+		clear: both;
+		padding: 0 15px;
+	}
+	.fs-carousel-viewport {
+		padding-bottom: 50px;
+	}
+	.fs-carousel-pagination {
+		bottom: 0 !important;
+	}
+	.star-rating {
+		display: none;
+	}
+	.fs-carousel-controls {
+		display: none !important;
+	}
+	.fs-carousel-page {
+		background: @color_accent_grey;
+		height: 3px !important;
+	}
+	.fs-carousel-page.fs-carousel-active {
+		background: @color_accent_yellow;
+	}
+	.fs-carousel-pagination {
+		height: auto !important;
+	}
+}

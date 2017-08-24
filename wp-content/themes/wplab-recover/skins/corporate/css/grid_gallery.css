@@ -1,0 +1,51 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, grid_gallery.less */
+.grid-gallery {
+  margin-bottom: 30px;
+}
+/* line 8, grid_gallery.less */
+.grid-gallery a,
+.grid-gallery img {
+  display: block;
+  float: left;
+}
+/* line 12, grid_gallery.less */
+.grid-gallery a {
+  margin-bottom: 30px;
+}
+/* line 15, grid_gallery.less */
+.grid-gallery a {
+  position: relative;
+}
+/* line 18, grid_gallery.less */
+.grid-gallery a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 8px solid #fcd846;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-size: 30px 30px;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 33, grid_gallery.less */
+.grid-gallery a:hover:after {
+  opacity: 1;
+  background-position: center center;
+}

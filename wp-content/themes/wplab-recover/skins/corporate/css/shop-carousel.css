@@ -1,0 +1,70 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, shop-carousel.less */
+.products-carousel {
+  margin-bottom: 30px;
+  overflow-y: visible;
+}
+/* line 9, shop-carousel.less */
+.products-carousel .product-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+}
+/* line 15, shop-carousel.less */
+.products-carousel .after {
+  height: 30px;
+}
+/* line 18, shop-carousel.less */
+.products-carousel li {
+  font-style: normal;
+  font-family: montserrat;
+}
+/* line 22, shop-carousel.less */
+.products-carousel h3 {
+  margin-bottom: 0;
+  font-size: 24px;
+  line-height: 1.35em;
+}
+/* line 27, shop-carousel.less */
+.products-carousel .inside {
+  clear: both;
+  padding: 0 15px;
+}
+/* line 31, shop-carousel.less */
+.products-carousel .fs-carousel-viewport {
+  padding-bottom: 50px;
+}
+/* line 34, shop-carousel.less */
+.products-carousel .fs-carousel-pagination {
+  bottom: 0 !important;
+}
+/* line 37, shop-carousel.less */
+.products-carousel .star-rating {
+  display: none;
+}
+/* line 40, shop-carousel.less */
+.products-carousel .fs-carousel-controls {
+  display: none !important;
+}
+/* line 43, shop-carousel.less */
+.products-carousel .fs-carousel-page {
+  background: #f3f3f3;
+  height: 3px !important;
+}
+/* line 47, shop-carousel.less */
+.products-carousel .fs-carousel-page.fs-carousel-active {
+  background: #fcd846;
+}
+/* line 50, shop-carousel.less */
+.products-carousel .fs-carousel-pagination {
+  height: auto !important;
+}

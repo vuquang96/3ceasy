@@ -1,0 +1,46 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.shortcode-fid {
+	text-align: center;
+	position: relative;
+	padding-bottom: 20px;
+	.icon {
+		min-height: 50px;
+		margin-bottom: 14px;
+	}
+	i.fa {
+		.fontSize( 50 );
+		color: @color_accent_yellow;
+	}
+	svg {
+		width: 50px;
+		path, rect, polygon {
+			fill: @color_accent_yellow;
+		}
+	}
+	.number {
+		color: #fff;
+		.fontSize( @h4_font_font_size );
+		margin-bottom: 8px;
+	}
+	.title {
+		color: #898989;
+		.decrease-font-size( @primary_font_font_size, 2 );
+		line-height: 1.5em;
+	}
+}
+.ie .shortcode-fid svg {
+	height: 50px;
+}
+.shortcode-fid:after {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 50%;
+	bottom: 0;
+	left: 25%;
+	background: @color_accent_yellow;
+}

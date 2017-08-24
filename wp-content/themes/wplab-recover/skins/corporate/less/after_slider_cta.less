@@ -1,0 +1,127 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.after-slider-cta {
+	background: @bg_footer2;
+	color: @footer_text_color;
+	padding: 30px 0;
+	h4 {
+		color: @footer_heading_color;
+		.fontSize( @h5_font_font_size );
+		.lineHeight( @h5_font_line_height );
+		font-weight: 300;
+		margin-bottom: 8px;
+	}
+	.container {
+		display: table;
+	}
+	.row {
+		display: table-row;
+	}
+	.col {
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+		position: relative;
+	}
+	.col-img {
+		min-height: 175px;
+		line-height: 175px;
+		color: @footer_heading_color;
+		font-weight: 600;
+		font-size: 48px;
+		text-align: center;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.desc {
+		.fontFamilySecondary( @secondary_font_font_family );
+		font-style: italic;
+		.fontSize( @primary_font_font_size );
+		.decrease-lineHeight( @primary_font_line_height, 8 );
+	}
+	.cta-btn {
+		top: -30px;
+		right: 0;
+		width: 370px;
+		position: absolute;
+	}
+	.cta-text {
+		color: @footer_heading_color;
+		text-transform: uppercase;
+		.increase-font-size( @primary_font_font_size, 2 );
+		line-height: 1.35em;
+		padding: 30px 35px;
+		background: rgba( 0,0,0, 0.7);
+	}
+	.cta-btn a {
+		display: block;
+		position: relative;
+		background: @color_accent_yellow;
+		color: @color_accent_inner;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 15px 15px 5px 15px;
+		font-weight: 400;
+	}
+	.cta-btn a:after {
+    content: '';
+    position: absolute;
+    height: 150px;
+    right: 0;
+    left: 0;
+    bottom: -150px;
+    background: @color_accent_yellow;
+    -moz-clip-path: polygon(0% 0%, 50% 10%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 50% 10%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 10%, 100% 0%);
+	}
+}
+
+@supports (-ms-accelerator:true) {
+	.after-slider-cta .cta-btn a {
+		padding: 15px;
+	}
+	.after-slider-cta .cta-btn a:after {
+		display: none;
+	}
+}
+
+.ie {
+	.after-slider-cta .cta-btn a {
+		padding: 15px;
+	}
+	.after-slider-cta .cta-btn a:after {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1199px) { 
+	.after-slider-cta {
+		.container, .row {
+			display: block;
+		}
+		.col {
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+		.col-text {
+			padding: 30px 0;
+		}
+		.cta-btn {
+			margin-top: 0 !important;
+			position: static;
+			top: 0 !important;
+			width: auto;
+		}
+		.cta-btn a {
+			padding: 15px;
+		}
+		.cta-btn a:after {
+			display: none;
+		}
+	}
+}

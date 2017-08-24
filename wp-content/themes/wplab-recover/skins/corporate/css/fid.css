@@ -1,0 +1,61 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, fid.less */
+.shortcode-fid {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+/* line 10, fid.less */
+.shortcode-fid .icon {
+  min-height: 50px;
+  margin-bottom: 14px;
+}
+/* line 14, fid.less */
+.shortcode-fid i.fa {
+  font-size: 50px;
+  color: #fcd846;
+}
+/* line 18, fid.less */
+.shortcode-fid svg {
+  width: 50px;
+}
+/* line 20, fid.less */
+.shortcode-fid svg path,
+.shortcode-fid svg rect,
+.shortcode-fid svg polygon {
+  fill: #fcd846;
+}
+/* line 24, fid.less */
+.shortcode-fid .number {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+/* line 29, fid.less */
+.shortcode-fid .title {
+  color: #898989;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+/* line 35, fid.less */
+.ie .shortcode-fid svg {
+  height: 50px;
+}
+/* line 38, fid.less */
+.shortcode-fid:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 50%;
+  bottom: 0;
+  left: 25%;
+  background: #fcd846;
+}
