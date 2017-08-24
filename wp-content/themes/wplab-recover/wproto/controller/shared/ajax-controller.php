@@ -468,10 +468,15 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 		    $lng = $response_a->results[0]->geometry->location->lng;
 		    	
 
-	    	echo $urlApiStore = get_site_url() . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
+	    	$urlApiStore = "http://localhost/3ceasy" . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
 
 	    	$dataApi = json_decode(file_get_contents($urlApiStore), true);
-	    		
+
+	    	if(is_array($dataApi)){
+	    		foreach ($dataApi as $value) {
+		    		$xhtml .= "<option value='". $value["store"] ."' data-email='". $value["email"] ."'>". $value["store"] ."</option>";
+		    	}
+	    	}
 		}
 		echo $xhtml;
 		wp_die();

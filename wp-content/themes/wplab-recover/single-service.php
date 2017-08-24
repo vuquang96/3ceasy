@@ -34,7 +34,7 @@
             </div>
         </div>
 		<div class="col-lg-7 main-select">
-			<form class="form-horizontal">
+			<form>
 			  <div class="item">
 			    <label class="col-sm-4">Name :</label>
 			    <div class="col-sm-8">
@@ -60,11 +60,12 @@
 			    <label class="col-sm-4">Choosing a repair shop :</label>
 			    <div class="col-sm-8">
 			      	<select name="store">
-					  <option>1</option>
-					  <option>2</option>
+					  
 					</select>
 			    </div>
 			  </div>
+
+			  <input type="text" name="store_mail" class="store_mail" >
 
 			  <div class="item">
 			    <label class="col-sm-4">Select time :</label>
