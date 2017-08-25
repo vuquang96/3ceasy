@@ -159,6 +159,9 @@ class wplab_recover_front_controller extends wplab_recover_core_controller {
 
 		wp_register_script( 'match-height', get_template_directory_uri() . '/js/libs/jquery.matchHeight-min.js', array( 'jquery', 'theme-front' ), _WPLAB_RECOVER_CACHE_TIME_, true );
 
+		wp_register_script( 'template-service', get_template_directory_uri() . '/js/libs/service.js', array( 'jquery' ), _WPLAB_RECOVER_CACHE_TIME_, true );
+		wp_enqueue_script( 'template-service' );
+
 		$js_vars = array(
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
 			'strSuccess' 		=> esc_html__('Success', 'wplab-recover'),

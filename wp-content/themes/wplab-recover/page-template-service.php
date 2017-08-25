@@ -20,23 +20,12 @@
 $dataApi = file_get_contents('http://localhost/3ceasy/wp-admin/admin-ajax.php?action=store_search&lat=21.0277644&lng=105.8341598&max_results=25&search_radius=100', true);
 $dataApi = json_decode($dataApi);
 
-	/*echo "<pre>";
-		print_r(json_decode($response));
-		echo "<pre>";*/
 			
 			
-$data = [];
-		if(is_array($dataApi)){
-	    		$i = 0;
-	    		foreach ($dataApi as $value) {
-		    		$data[$i]['store'] = $value->store;
-		    		$data[$i]['email'] = $value->email;
-		    		$i++;
-		    	}
-	    	}
-	    		echo "<pre>";
-	    	    print_r($data);
-	    	    echo "</pre>";
+
+	    		/*echo "<pre>";
+	    	    print_r($dataApi);
+	    	    echo "</pre>";*/
 
 
 

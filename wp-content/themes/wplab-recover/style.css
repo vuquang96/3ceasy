@@ -121,6 +121,7 @@
 .nws-model .item,
 .nws-model-error .item{
 	height: 50px;
+    overflow: hidden;
 }
 .nws-service .nws-model-error span.text,
 .nws-model .item span.text{
@@ -157,4 +158,13 @@
 
 .single-service .main-select input{
 	background: #fff; 
+}
+.single-service .select-store .fs-dropdown-options,
+.single-service .select-store button{
+	display: none;
+}
+.single-service .main-select select{
+	z-index: 15;
+	position: relative;
+	opacity: 1; 
 }

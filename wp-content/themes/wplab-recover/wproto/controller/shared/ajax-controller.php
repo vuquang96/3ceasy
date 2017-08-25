@@ -474,7 +474,8 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 
 	    	if(is_array($dataApi)){
 	    		foreach ($dataApi as $value) {
-		    		$xhtml .= "<option value='". $value["store"] ."' data-email='". $value["email"] ."'>". $value["store"] ."</option>";
+	    			$store = $value["store"] . ' - ' . $value["address"] . ', ' . $value["city"];
+		    		$xhtml .= "<option value='". $store."vl' data-email='". $value["email"] ."'>". $store ."</option>";
 		    	}
 	    	}
 		}
