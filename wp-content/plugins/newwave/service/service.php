@@ -79,6 +79,6 @@ class service {
 
 	public function callback_price( $post ) {
 		$metaPrice= get_post_meta($post->ID, 'service-price', true);
-	    echo  "<input id='nws-price' name='service-price' type='number' value='$metaPrice' style='width:100%;' />";
+	    echo  "<input id='nws-price' name='service-price' type='number' step='0.001' value='$metaPrice' style='width:100%;' />";
 	}
 }

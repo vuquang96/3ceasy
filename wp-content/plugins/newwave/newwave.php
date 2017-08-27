@@ -98,6 +98,11 @@ class Newwave{
                 'slug'                  => 'taxonomy-images',
                 'required'              => true, 
             ),
+            array(
+                'name'                  => 'Taxonomy Images', 
+                'slug'                  => 'taxonomy-images',
+                'required'              => true, 
+            ),
         );
     
         // Setting TGM

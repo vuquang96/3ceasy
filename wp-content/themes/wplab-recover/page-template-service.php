@@ -39,12 +39,15 @@ $dataApi = json_decode($dataApi);
 					<?php
 						foreach ($cats as $value) {
 							$img  = "";
-							$associations = taxonomy_image_plugin_get_associations();
-							if ( isset( $associations[ $value->term_id ] ) ) {
-								$attachment_id = (int) $associations[ $value->term_id ];
-								$src = taxonomy_image_plugin_get_image_src( $attachment_id );
-								$img = '<img src="'. $src .'" />';
+							if(function_exists("taxonomy_image_plugin_get_associations")){
+								$associations = taxonomy_image_plugin_get_associations();
+								if ( isset( $associations[ $value->term_id ] ) ) {
+									$attachment_id = (int) $associations[ $value->term_id ];
+									$src = taxonomy_image_plugin_get_image_src( $attachment_id );
+									$img = '<img src="'. $src .'" />';
+								}
 							}
+
 							echo '<div class="item" data-idterm="'. $value->term_id .'" >'
 						 		. '<span class="text">' .  $value->name . '</span>'
 						 		. $img

@@ -15,6 +15,9 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 		add_action( 'wp_ajax_wproto_save_css', array( $this, 'ajax_save_css' ) );
 		add_action( 'wp_ajax_wproto_change_skin', array( $this, 'ajax_change_skin' ) );
 		add_action( 'wp_ajax_wproto_save_style_version', array( $this, 'save_style_version' ) );
+
+		// Service single 
+		add_action( 'admin_post_nopriv_nws_customer', array($this, 'order_service') );
 		
 	}
 	
@@ -163,6 +166,78 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 		
 		update_option( 'wplab_recover_compiled_style_version', $style_version );
 		die;
+	}
+
+
+	function order_service(){
+		session_start(); 
+		if(isset($_POST)) {
+			$api_url     = 'https://www.google.com/recaptcha/api/siteverify';
+			$site_key    = '6LcmBS4UAAAAALCnGWjQB2CIWU2HcMPPHdOlS2Dp';
+			$secret_key  = '6LcmBS4UAAAAAIjcUBXvXDvxTcuwlMiiM_hQwyMT';
+			//get data post
+		    $site_key_post    = $_POST['g-recaptcha-response'];
+		      
+		    //get IP client
+		    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+		        $remoteip = $_SERVER['HTTP_CLIENT_IP'];
+		    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+		        $remoteip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		    } else {
+		        $remoteip = $_SERVER['REMOTE_ADDR'];
+		    }
+		     
+		    //create link connect
+		    $api_url = $api_url.'?secret='.$secret_key.'&response='.$site_key_post.'&remoteip='.$remoteip;
+		    //result google
+		    $response = file_get_contents($api_url);
+		    //data json
+		    $response = json_decode($response);
+		    if($response->success == true)
+		    {
+	        	global $wpdb;
+	        	$table = $wpdb->prefix . 'nws_customer';
+	        	$data = array(
+	        			"service" 		=> $_POST['service'],
+	        			"category" 		=> $_POST['category'],
+	        			"total" 		=> $_POST['total'],
+	        			"name_customer" => $_POST['name'],
+	        			"phone_number" 	=> $_POST['phone'],
+	        			"store" 		=> $_POST['store'],
+	        			"time" 			=> $_POST['date'],
+	        			"email_store" 	=> $_POST['email_store'],
+	        			"email" 		=> $_POST['email'],
+	        		);
+	        	$result = $wpdb->insert($table, $data);
+	        	if($result){
+	        		$_SESSION['flash_messages'] = __("Order successful, you have an email please check it. thank you !", 'wplab-recover');
+	        		$time = strtotime($item['time']);
+        			$date = date('d/m/Y', $time);
+	        		// Store
+	        		$headers = array('Content-Type: text/html; charset=UTF-8');
+$mailMessage = '<table>
+					<thead><h3>Customer information :</h3></thead>
+					<tr><td><b>Name Customer :</b> <span>'.$_POST['name'].'</span></td></tr>
+					<tr><td><b>Symptom :</b> <span>'.$_POST['category'].'</span></td></tr>
+					<tr><td><b>Service :</b> <span>'.$_POST['service'].'</span></td></tr>
+					<tr><td><b>Phone :</b> <span>'.$_POST['phone'].'</span></td></tr>
+					<tr><td><b>Store :</b> <span>'.$_POST['store'].'</span></td></tr>
+					<tr><td><b>Date :</b> <span>'.$date.'</span></td></tr>
+					<tr><td><b>Amount of money :</b> <span style="color: blue">'.$_POST['total'].'</span></td></tr>
+				</table>';
+					wp_mail($_POST['email_store'], "Store", $mailMessage, $headers);
+
+					// Customer
+					wp_mail($_POST['email'], "Store", $mailMessage, $headers);
+
+	        	}else{
+	        		$_SESSION['flash_messages'] = __("Sorry, there was an error. Please try again !", 'wplab-recover');
+	        	}
+		    }else{
+		    	$_SESSION['flash_messages'] = __("Sorry, there was an error. Please try again !", 'wplab-recover');
+		    }
+		    wp_redirect($_POST['url_back']);
+		}
 	}
 	
 }

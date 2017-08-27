@@ -114,11 +114,14 @@
     }
 
     public function column_total($item){
+        if(function_exists('wc_price')){
+            return wc_price($item['total']);
+        }
         return $item['total'];
     }
 
     public function column_name($item){
-        return $item['contact_info'];
+        return $item['name_customer'];
     }
 
     public function column_phone_number($item){

@@ -51,4 +51,4 @@ function nws_order_customer() {
 	}
 }
 
-add_action( 'admin_post_nopriv_nws_customer', 'nws_order_customer' );
+//add_action( 'admin_post_nopriv_nws_customer', 'nws_order_customer' );

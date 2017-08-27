@@ -78,6 +78,9 @@
 .nws-service .row{
 	margin-bottom: 25px;
 }
+.nws-service .row:nth-child(even){
+	background-color: #f7f7f7;
+}
 .nws-service .title{
     padding-bottom: 8px;
     color: #333;
@@ -95,15 +98,17 @@
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
-    margin-left: 8px;
-    margin-top: 8px;
     position: relative;
+    background-color: #fff;
+    margin: 10px 5px;
 }
 .nws-service .messinfo{
 	border-radius: 3px;
     text-align: center;
     cursor: pointer;
     border: 1px solid #eee;
+    background-color: #fff;
+    margin: 10px 0px;
 }
 .nws-service .messinfo:hover,
 .nws-service .item.active,
@@ -143,19 +148,21 @@
 	padding: 25px;
     border-top-width: 5px; 
 }
-.single-service .main-info .title{
-    display: inline-block;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 3px;
-    color: #999;
-    margin-bottom: 15px;
-}
+
+/*Single service*/
 .single-service .main-info .total-box {
 	text-align: right;
 	font-size: 24px;
     color: #ff7400;
 }
-
+.single-service .main-info .total-box span{
+	font-size: 20px;
+    color: #8dc63f;
+}
+.single-service .item{
+    display: inline-block;
+    width: 100%;
+}
 .single-service .main-select input{
 	background: #fff; 
 }
@@ -167,4 +174,20 @@
 	z-index: 15;
 	position: relative;
 	opacity: 1; 
+}
+.single-service .btn-submit-service {
+	display: none;
+}
+.single-service form .service-danger{
+	border-color: red;
+}
+.single-service .text-danger{
+	display: inline-block;
+	color: red;
+	font-style: italic;
+	display: none;
+}
+.service-message{
+    font-size: 22px;
+    font-family: cursive;
 }
