@@ -1,0 +1,99 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.theme-half-slider {
+	font-size: 0;
+	.slide {
+		min-height: 940px;
+		.transition-all( 0.3s );
+		.fontSize( @primary_font_font_size );
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+		padding: 320px 110px 190px 110px;
+	}
+	.left-slide {
+		text-align: right;
+	}
+	h2 {
+		.transition-all( 0.3s );
+	}
+	h2 {
+		color: @color_accent_inner_inverted;
+		.fontSize(90);
+		line-height: 1em;
+		font-weight: bold;
+	}
+	h4 {
+		font-weight: lighter;
+		color: @color_accent_inner_inverted;
+		.fontSize(30);
+		line-height: 1.15em;
+	}
+	.text {
+		font-style: italic;
+		color: @color_accent_inner_inverted;
+		.fontFamilySecondary( @secondary_font_font_family );
+		.increase-font-size( @primary_font_font_size, 2 );
+		margin-bottom: 35px;
+	}
+	.text, .button {
+		visibility: hidden;
+		opacity: 0;
+		.transition-all( 0.3s );
+	}
+	.inner {
+		.transition-all( 0.3s );
+		.transform( translate(0,30%) );
+	}
+	.slide:hover {
+		h2 {
+			color: @color_accent_yellow;
+		}
+		.text, .button {
+			opacity: 1;
+			visibility: visible;
+		}
+		.inner {
+			.transform( translate(0,0) );
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.theme-half-slider {
+		.slide {
+			min-height: 1px;
+		}
+		h2 {
+			.fontSize(50);
+			line-height: 1em;
+		}
+		h4 {
+			.fontSize(20);
+			line-height: 1.2em;
+		}
+		br {
+			display: none;
+		}	
+	}
+}
+@media screen and (max-width: 992px) {
+	.theme-half-slider {
+		.slide {
+			display: block;
+			width: auto;
+			padding: 70px 15px;
+			text-align: left;	
+		}
+		.inner {
+			.transform( translate(0,0) );
+		}
+		.text, .button {
+			visibility: visible;
+			opacity: 1;	
+		}
+	}
+}

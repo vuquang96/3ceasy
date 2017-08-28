@@ -99,8 +99,8 @@ class Newwave{
                 'required'              => true, 
             ),
             array(
-                'name'                  => 'Taxonomy Images', 
-                'slug'                  => 'taxonomy-images',
+                'name'                  => 'WP Mail SMTP by WPForms', 
+                'slug'                  => 'wp-mail-smtp',
                 'required'              => true, 
             ),
         );

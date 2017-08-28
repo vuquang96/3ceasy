@@ -1,0 +1,33 @@
+<div class="wrap">
+    <h1> Api Capcha Google </h1>
+    
+    <?php if(isset($data['message'])){ ?>
+		<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
+	        <p><strong><?php echo $data['message'] ?></strong></p>
+	        <button type="button" class="notice-dismiss">
+	            <span class="screen-reader-text">Dismiss this notice.</span>
+	        </button>
+	    </div>
+    <?php } ?>
+     
+    <form method="post" action='' enctype="multipart/form-data">
+    	<table class="form-table">
+            <tbody>
+            	<tr>
+		            <th><label> Site Key <span style="color:red;">*</span> : </label></th>
+		            <td>
+		            	<input type="text" class="regular-text" name="site_key" value="<?php echo $data['site_key']; ?>"  placeholder="Please enter your Site Key"/>
+	            	</td>
+		        </tr>
+
+		    	<tr>
+		            <th><label> Secret Key <span style="color:red;">*</span> : </label></th>
+		            <td>
+		            	<input type="text" class="regular-text" name="secret_key" value="<?php echo $data['secret_key']; ?>" placeholder="Please enter your Secret Key" />
+	            	</td>
+		        </tr>
+	        </tbody>
+        </table>
+        <input type="submit" name="submit" id="mp-btn-change" class="button button-primary" value="Save Changes">
+    </form>
+</div>

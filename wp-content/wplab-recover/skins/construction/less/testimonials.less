@@ -1,0 +1,40 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.shortcode-testimonials {
+	.fs-carousel-controls {
+		display: none !important;
+	}
+	.fs-carousel-pagination.fs-carousel-visible {
+		bottom: -28px;
+		left: 50px;
+		width: auto;
+	}
+	.fs-carousel-page {
+		background: darken( @color_accent_grey, 7% );
+		height: 2px;
+		.rounded(0);
+	}
+	.fs-carousel-page.fs-carousel-active {
+		background: @color_accent_yellow;
+	}
+	.fs-carousel-canister {
+		height: auto !important;
+	}
+	.photo img {
+		width: 80px;
+	}
+}
+
+.shortcode-testimonials.style-boxed {
+	.fs-carousel-pagination.fs-carousel-visible {
+		left: 100px;
+	}
+}
+.shortcode-testimonials.style-small_photo {
+	.fs-carousel-pagination.fs-carousel-visible {
+		left: 55px;
+	}
+}

@@ -17,7 +17,8 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 		add_action( 'wp_ajax_wproto_save_style_version', array( $this, 'save_style_version' ) );
 
 		// Service single 
-		add_action( 'admin_post_nopriv_nws_customer', array($this, 'order_service') );
+		add_action( 'admin_post_nws_customer', array($this, 'order_service') );
+		//add_action( 'admin_post_nopriv_nws_customer', array($this, 'order_service') );
 		
 	}
 	
@@ -173,8 +174,8 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 		session_start(); 
 		if(isset($_POST)) {
 			$api_url     = 'https://www.google.com/recaptcha/api/siteverify';
-			$site_key    = '6LcmBS4UAAAAALCnGWjQB2CIWU2HcMPPHdOlS2Dp';
-			$secret_key  = '6LcmBS4UAAAAAIjcUBXvXDvxTcuwlMiiM_hQwyMT';
+			$site_key    = get_option('nws_site_key', "");
+			$secret_key  = get_option('nws_secret_key', '');
 			//get data post
 		    $site_key_post    = $_POST['g-recaptcha-response'];
 		      
@@ -211,8 +212,12 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 	        	$result = $wpdb->insert($table, $data);
 	        	if($result){
 	        		$_SESSION['flash_messages'] = __("Order successful, you have an email please check it. thank you !", 'wplab-recover');
-	        		$time = strtotime($item['time']);
+	        		$time = strtotime($_POST['date']);
         			$date = date('d/m/Y', $time);
+        			$total = $_POST['total'];
+					if(function_exists('wc_price')){
+						$total = wc_price($total);
+					}
 	        		// Store
 	        		$headers = array('Content-Type: text/html; charset=UTF-8');
 $mailMessage = '<table>
@@ -223,7 +228,7 @@ $mailMessage = '<table>
 					<tr><td><b>Phone :</b> <span>'.$_POST['phone'].'</span></td></tr>
 					<tr><td><b>Store :</b> <span>'.$_POST['store'].'</span></td></tr>
 					<tr><td><b>Date :</b> <span>'.$date.'</span></td></tr>
-					<tr><td><b>Amount of money :</b> <span style="color: blue">'.$_POST['total'].'</span></td></tr>
+					<tr><td><b>Amount of money :</b> <span style="color: blue">'.$total.'</span></td></tr>
 				</table>';
 					wp_mail($_POST['email_store'], "Store", $mailMessage, $headers);
 

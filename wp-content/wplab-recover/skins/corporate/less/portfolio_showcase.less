@@ -1,0 +1,96 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.portfolio-showcase {
+	.swiper-slide {
+		width: 640px;
+		cursor: move;
+	}
+	.item-inside {
+		float: left;
+		position: relative;
+		img {
+			display: block;
+		}
+	}
+	.view, .link-project {
+		display: inline-block;
+		width: 25px;
+		height: 15px;
+		background-size: 25px 25px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 10px;
+	}
+	.title {
+		display: block;
+		h4 {
+			.fontSize(24);
+			line-height: 28px;
+			margin-bottom: 0;
+			color: #fff;
+			font-weight: 300;
+		}
+	}
+	.cats {
+		.fontSize(14);
+		line-height: 1.5em;
+		margin-bottom: 18px;
+		a {
+			color: #898989;
+		}
+		a:hover {
+			color: @color_accent_yellow;
+		}
+	}
+	.title:hover h4 {
+		color: @color_accent_yellow;
+	}
+	.title + .links {
+		margin-top: 18px;
+	}
+	.caption {
+		.box-sizing();
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.7);
+		padding: 0 25px 0 25px;
+		text-align: center;
+		opacity: 0;
+		.transition( opacity 0.3s );
+		.caption-table {
+			display: table;
+			height: 100%;
+			width: 100%;
+		}
+		.caption-cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+	}
+	.item-inside:hover {
+		.caption {
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.portfolio-showcase {
+		.swiper-slide, .item-inside {
+			width: 320px;
+		}
+		.item-num-2, .item-num-3 {
+			width: 160px;
+		}
+		.title, .cats {
+			display: none;
+		}
+	}
+}

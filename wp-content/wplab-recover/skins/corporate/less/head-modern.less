@@ -1,0 +1,179 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+/**	
+	Modern header styles
+**/
+
+.header-modern #header-wrapper.default-tpl { 
+	min-height: 635px;
+	background-color: @color_accent_black;
+	background-position: center bottom;
+}
+.header-modern #header-wrapper.default-tpl + .page-corners {
+	margin: 0 auto;
+	max-width: 1330px;
+	z-index: 11;
+	position: relative;
+	margin-top: -295px;
+}
+.header-modern #content-wrapper.default-tpl {
+	max-width: 1330px;
+	margin: 0 auto 80px auto;
+	background-color: @bg_body;
+	min-height: 295px;
+	z-index: 11;
+	position: relative;
+}
+.header-modern #header-wrapper.default-tpl + .page-corners {
+	height: 80px;
+	position: relative;
+}
+.header-modern #header-wrapper.default-tpl + .page-corners:before,
+.header-modern #header-wrapper.default-tpl + .page-corners:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.header-modern #header-wrapper.default-tpl + .page-corners:before {
+	right: 80px;
+	left: 0;
+	background-color: @bg_body;
+}
+.header-modern #header-wrapper.default-tpl + .page-corners:after {
+	right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 80px 0 0 80px;
+	border-color: transparent transparent transparent darken( @bg_alter, 7% );
+}
+body.rtl.header-modern #header-wrapper.default-tpl + .page-corners:after {
+	border-color: transparent darken( @bg_alter, 7% ) transparent transparent;
+}
+@media screen and (max-width: 992px) {
+	.header-modern #header-wrapper.default-tpl {
+		min-height: 1px;
+	}
+	.header-modern .page-corners {
+		display: none;
+	}
+	.header-modern #content-wrapper.default-tpl {
+		padding-top: 80px;
+	}
+}
+
+.header-modern #header, .header-modern #page-header {
+	position: relative;
+	z-index: 11;
+}
+#menu-container {
+	z-index: 100;
+}
+.header-modern #page-header {
+	padding-top: 120px;
+	padding-bottom: 70px;
+	h2, h1 {
+		.fontSize( @h2_font_font_size );
+		line-height: 1.35em;
+		color: #fff;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	.header-cta {
+		margin-top: 35px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.header-modern #page-header h2, .header-modern #page-header h1 {
+		.decrease-font-size( @h2_font_font_size, 15 );
+	}
+	.header-modern #page-header {
+		margin-bottom: 0;
+		
+		.header-cta {
+			margin-top: 35px;
+		}
+		
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.header-modern #page-header {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+}
+
+.header-modern .breadcrumbs {
+	text-transform: uppercase;
+	.decrease-font-size( @primary_font_font_size, 2 );
+	color: @inverted_text_color;
+	a {
+		color: @inverted_text_color;
+	}
+	a:hover {
+		color: @color_accent_yellow;
+	}
+	.separator {
+		display: none;
+	}
+	span {
+		display: inline-block;
+    vertical-align: middle;
+		position: relative;
+		padding: 7px 20px 7px 10px;
+	}
+	span:before {
+		content: '';
+		position: absolute;
+		width: 4px;
+		height: 5px;
+		left: 0;
+		top: 13px;
+	}
+	.last-item {
+		background-color: rgba( red( @color_accent_black ), green( @color_accent_black ), blue( @color_accent_black ), 0.5);
+		padding-right: 10px;
+		font-weight: bold;
+		color: @color_accent_yellow;
+		white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+	}
+	.last-item:before, .corner:before {
+		display: none;
+	}
+	.corner {
+		margin: 0;
+		padding: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 15px 0 15px 10px;
+		border-color: transparent transparent transparent rgba( red( @color_accent_black ), green( @color_accent_black ), blue( @color_accent_black ), 0.5);
+	}
+}
+body.rtl.header-modern .breadcrumbs .corner {
+	border-color: transparent rgba( red( @color_accent_black ), green( @color_accent_black ), blue( @color_accent_black ), 0.5) transparent transparent;
+}
+
+@media screen and (max-width: 767px) {
+	.header-modern .breadcrumbs {
+		.last-item {
+			background-color: transparent;
+			font-weight: normal;
+		}
+		.last-item:before {
+			display: block;
+		}
+		.last-item:after, .corner {
+			display: none;
+		}
+	}
+}

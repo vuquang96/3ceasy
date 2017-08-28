@@ -1,4 +1,5 @@
 <?php
+require_once "capcha-api/capcha-api.php";
 require_once "customer/customer.php";
 class service {
 	public function __construct(){
@@ -6,6 +7,7 @@ class service {
  		add_action( 'save_post', array($this, 'wpdocs_save_meta_box'), 10, 3 );
  		add_action( 'add_meta_boxes', array($this, 'wpdocs_register_meta_boxes') );
  		new customer();
+ 		new CapchaApi();
  	}
 
  	public function service_init(){

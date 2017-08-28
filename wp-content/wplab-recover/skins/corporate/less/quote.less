@@ -1,0 +1,78 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+blockquote.style-big_photo {
+	padding: 100px 0 100px 450px;
+}
+blockquote.style-big_photo:before {
+	font-size: 150px;
+	color: @color_accent_yellow;
+	left: 400px;
+}
+blockquote.style-small_photo_alt {
+	padding: 70px 0 0 50px;
+}
+blockquote.style-small_photo_alt svg {
+	width: 70px;
+	height: 60px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	path, rect, polygon {
+		fill: @color_accent_yellow;
+	}
+}
+blockquote.style-small_photo_alt:before,
+blockquote.style-boxed:before {
+	display: none;
+}
+blockquote.style-boxed {
+	padding: 0;
+}
+blockquote.style-boxed .quote-content {
+	background-color: @bg_alter;
+	padding: 35px 40px;
+	.increase-font-size( @primary_font_font_size, 8 );
+	line-height: 1.25em;
+	margin-bottom: 40px;
+	position: relative;
+	.fw-page-builder-content {
+		margin-bottom: 0;
+	}
+}
+blockquote.style-boxed .quote-content:after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 60px 60px 0;
+	left: 0;
+	bottom: -60px;
+	border-color: transparent darken( @bg_alter, 2% ) transparent transparent;
+}
+body.rtl {
+	blockquote.style-boxed .quote-content:after {
+		border-color: transparent transparent transparent darken( @bg_alter, 2% );
+	}
+}
+blockquote.style-boxed .quote-data {
+	padding-left: 100px;
+}
+@media screen and (max-width: 767px) {
+	blockquote.style-big_photo {
+		padding: 0 0 0 80px !important;
+		background: none !important;
+	}
+	blockquote.style-big_photo:before {
+		left: 0;
+	}
+	blockquote.style-small_photo_alt {
+		padding: 0;
+	}
+	blockquote.style-small_photo_alt svg {
+		display: none;	
+	}
+}

@@ -1,0 +1,7 @@
+.fw-option-type-stylebox input {
+	width: 70px !important;
+	margin-right: 8px;
+}
+.fw-option-type-stylebox input:last-of-type {
+	margin-right: 0;
+}

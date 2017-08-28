@@ -1,0 +1,7 @@
+.ui-dialog-content {
+  height: auto !important;
+  min-height: 1px !important;
+}
+.wproto-no-close .ui-dialog-titlebar-close {
+  visibility: hidden;
+}

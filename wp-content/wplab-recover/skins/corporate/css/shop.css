@@ -1,0 +1,113 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, shop.less */
+.shop-products-shortcode-list {
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+/* line 9, shop.less */
+.shop-products-shortcode-list ul.products {
+  margin: 0 !important;
+}
+/* line 11, shop.less */
+.shop-products-shortcode-list ul.products h2 {
+  margin-bottom: 0;
+}
+/* line 15, shop.less */
+.shop-products-shortcode-list ul.products li {
+  margin: 0 0 50px 0;
+  padding: 0 0 50px 0;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  padding-left: 300px;
+  min-height: 300px;
+  display: block;
+  width: auto !important;
+}
+/* line 25, shop.less */
+.shop-products-shortcode-list ul.products li:last-of-type {
+  border-bottom: 0;
+}
+/* line 28, shop.less */
+.shop-products-shortcode-list .thumb {
+  width: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 34, shop.less */
+.shop-products-shortcode-list .title {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+/* line 40, shop.less */
+.shop-products-shortcode-list .title a {
+  color: #111111;
+}
+/* line 43, shop.less */
+.shop-products-shortcode-list .title a:hover {
+  color: #fcd846;
+}
+/* line 47, shop.less */
+.shop-products-shortcode-list .amount {
+  font-size: 20px;
+}
+/* line 50, shop.less */
+.shop-products-shortcode-list .product-rating {
+  float: right;
+}
+/* line 53, shop.less */
+.shop-products-shortcode-list .product-price {
+  float: left;
+}
+/* line 56, shop.less */
+.shop-products-shortcode-list header {
+  margin-bottom: 10px !important;
+}
+/* line 59, shop.less */
+.shop-products-shortcode-list .onsale {
+  left: 0 !important;
+}
+@media screen and (max-width: 767px) {
+  /* line 66, shop.less */
+  .shop-products-shortcode-list .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  /* line 70, shop.less */
+  .shop-products-shortcode-list .product-rating,
+  .shop-products-shortcode-list .product-price {
+    float: none;
+    display: block;
+  }
+  /* line 74, shop.less */
+  .shop-products-shortcode-list .thumb {
+    width: 100px;
+  }
+  /* line 77, shop.less */
+  .shop-products-shortcode-list ul.products li {
+    padding-left: 120px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 85, shop.less */
+  .shop-products-shortcode-list .thumb {
+    width: auto;
+    position: static;
+    margin-bottom: 25px;
+  }
+  /* line 90, shop.less */
+  .shop-products-shortcode-list ul.products li {
+    padding-left: 0;
+  }
+}

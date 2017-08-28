@@ -2,7 +2,7 @@
  require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 
  class gird extends  \WP_List_Table{
-    private $_per_page = 5;
+    private $_per_page = 15;
     private $_total_customer;
     protected $_template ;
     
@@ -62,14 +62,14 @@
     public function get_columns(){
         $columnHeader = array(
             'stt'               => 'STT',
-            'service'           => 'Service',
-            'store'             => 'Store',
-            'total'             => 'Total',
-            'name'              => 'Name',
-            'phone_number'      => 'Phone Number',
-            'time'              => 'Time',
-            'category'          => 'Category',
-            'email'             => 'Email',
+            'service'           => __( 'Service', NEWWAVE_DOMAIN ),
+            'store'             => __( 'Store', NEWWAVE_DOMAIN ),
+            'total'             => __( 'Total', NEWWAVE_DOMAIN ),
+            'name'              => __( 'Name', NEWWAVE_DOMAIN ),
+            'phone_number'      => __( 'Phone Number', NEWWAVE_DOMAIN ),
+            'time'              => __( 'Time', NEWWAVE_DOMAIN ),
+            'category'          => __( 'Category', NEWWAVE_DOMAIN ),
+            'email'             => __( 'Email', NEWWAVE_DOMAIN ),
         );
         return $columnHeader;
     }

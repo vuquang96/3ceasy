@@ -1,0 +1,81 @@
+<wpml-config>
+  <admin-texts>
+   <!-- fw_theme_settings_options:YOURTHEME (this is the field in the database)-->
+   <key name="fw_theme_settings_options:default">
+	
+		<!-- plugins -->
+    <key name="shop_title"/>
+    
+    <!-- footer bar -->
+    <key name="footer_bar">
+    	<key name="cta">
+    		<key name="footer_cta_text"/>
+    		<key name="footer_cta_link_text"/>
+    		<key name="footer_cta_link_url"/>
+    	</key>
+    	<key name="contacts">
+    		<key name="footer_contacts_phones"/>
+    		<key name="footer_contacts_address"/>
+    		<key name="footer_contacts_emails"/>
+    	</key>
+    </key>
+    
+    <!-- bottom bar -->
+  	<key name="display_bottom_bar">
+			<key name="true">
+				<key name="bottom_bar_content"/>
+			</key>
+		</key>
+    
+    <!-- header -->
+    <key name="header_style">
+			<key name="modern">
+				<key name="modern_display_header_cta">
+					<key name="true">
+						<key name="modern_header_cta_link_text"/>
+						<key name="modern_header_cta_link_url"/>
+					</key>
+				</key>
+			</key>
+		</key>
+    
+    <!-- top bar -->
+    <key name="display_top_bar">
+			<key name="true">
+				<key name="top_bar_phone_text"/>
+				<key name="top_bar_phone"/>
+				<key name="top_bar_email_text"/>
+				<key name="top_bar_email"/>
+				<key name="top_bar_wh_text"/>
+				<key name="top_bar_wh"/>
+			</key>
+		</key>
+		
+    <!-- posts -->
+    <key name="blog_title" />
+    <key name="read_more_title" />
+    <key name="load_more_title" />
+    
+    <key name="portfolio_title" />
+    <key name="portfolio_archive_title" />
+    <key name="portfolio_load_more_title" />
+    
+    <key name="page_404_content" />
+    
+    <!-- maintenance -->
+    <key name="maintenance_mode">
+			<key name="true">
+				<key name="title" />
+				<key name="subtitle" />
+				<key name="content" />
+			</key>
+		</key>
+    
+  </admin-texts>
+  <custom-types>
+    <custom-type translate="1">fw-portfolio</custom-type>
+  </custom-types>  
+  <taxonomies>
+    <taxonomy translate="1">fw-portfolio-category</taxonomy>
+  </taxonomies> 
+</wpml-config>

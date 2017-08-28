@@ -1,0 +1,194 @@
+/*
+	Theme Name: Recover
+	Theme URI: http://themeforest.net/item/recover-construction-building-business-theme/15237991/?ref=wplab
+	Author: WPlab.Pro
+	Text Domain: wplab-recover
+	Domain Path: /languages
+	Author URI: http://themeforest.net/user/wplab/?ref=wplab
+	License URI: http://themeforest.net/licenses/regular_extended
+	Description: Recover — Amazing multi-purpose premium WordPress theme
+	Version: 1.8.9
+	Tags: yellow, green, blue, white, one-column, two-columns, right-sidebar, fluid-layout, custom-menu, featured-images, post-formats, sticky-post, translation-ready
+	License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself. You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
+*/
+.sticky, .gallery-caption, .bypostauthor, .wp-caption-text, .screen-reader-text {
+
+}
+.share-links .instagram:before, .share-links .instagram:after {
+  background-color: #bd3381;
+}
+#go-top {
+  z-index: 100 !important;
+}
+.layout-framed #menu-container.headroom--not-top.headroom--unpinned {
+	margin-top: 0 !important;
+}
+.fw-main-row > .container {
+	width: auto;
+	max-width: 1200px;
+}
+.video-bg-section > .container,
+.video-bg-section > .container-fluid {
+	position: relative;
+	z-index: 100;
+}
+.video-bg-section > .container:before,
+.video-bg-section > .container-fluid:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+}
+
+#demo-stand {
+	position: fixed;
+	z-index: 9999;
+	right: 0;
+	top: 170px;
+	background: #fff;
+	box-shadow: 3px 0px 17px 1px rgba(0,0,0,0.39);
+	width: 55px;
+}
+#demo-stand a {
+	display: block;
+	width: 55px;
+	height: 55px;
+	background-size: 25px 25px !important;
+	transition: all 0.5s;
+}
+#demo-stand a:hover {
+	background-color: #eee !important;
+}
+#demo-stand a.purchase {
+	background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20480%20480%22%20style%3D%22enable-background%3Anew%200%200%20480%20480%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20style%3D%22fill%3A%2319BF55%3B%22%20d%3D%22M480%2C320.9c0%2C8.8-7.2%2C16-16%2C16H16c-8.8%2C0-16-7.2-16-16V75.3c0-8.8%2C7.2-16%2C16-16h448%0A%09c8.8%2C0%2C16%2C7.2%2C16%2C16V320.9z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%2310AF58%3B%22%20d%3D%22M464%2C59.3c8.8%2C0%2C16%2C7.2%2C16%2C16v245.6c0%2C8.8-7.2%2C16-16%2C16H16c-8.8%2C0-16-7.2-16-16%22%2F%3E%0A%3Cg%3E%0A%09%3Cpath%20style%3D%22fill%3A%230C9668%3B%22%20d%3D%22M128%2C201.7c12.8-7.2%2C20-19.2%2C20-32.8c0-12.8-4.8-23.2-13.6-29.6c-10.4-8-23.2-12-44-12%0A%09%09c-12.8%2C0-27.2%2C1.6-36%2C3.2c-1.6%2C0-3.2%2C1.6-3.2%2C4v148.8c0%2C1.6%2C1.6%2C3.2%2C3.2%2C4c4.8%2C0.8%2C15.2%2C1.6%2C30.4%2C1.6c25.6%2C0%2C44-4.8%2C54.4-15.2%0A%09%09c9.6-8.8%2C13.6-20%2C13.6-32.8C153.6%2C220.1%2C141.6%2C207.3%2C128%2C201.7z%20M92%2C192.1H78.4v-41.6c3.2-0.8%2C8-0.8%2C13.6-0.8%0A%09%09c29.6%2C0%2C29.6%2C16%2C29.6%2C20.8C120.8%2C184.1%2C109.6%2C192.1%2C92%2C192.1z%20M90.4%2C265.7c-5.6%2C0-9.6%2C0-12.8-0.8v-50.4h12%0A%09%09c10.4%2C0%2C35.2%2C2.4%2C35.2%2C25.6C125.6%2C262.5%2C104%2C265.7%2C90.4%2C265.7z%22%2F%3E%0A%09%3Cpath%20style%3D%22fill%3A%230C9668%3B%22%20d%3D%22M287.2%2C128.1h-20c-2.4%2C0-4%2C1.6-4%2C4v89.6c0%2C29.6-11.2%2C44.8-32.8%2C44.8c-20%2C0-31.2-16-31.2-44.8v-89.6%0A%09%09c0-2.4-1.6-4-4-4H176c-2.4%2C0-4%2C1.6-4%2C4v88.8c0%2C59.2%2C36%2C68%2C57.6%2C68c38.4%2C0%2C60.8-25.6%2C60.8-68.8v-88%0A%09%09C291.2%2C130.5%2C289.6%2C128.1%2C287.2%2C128.1z%22%2F%3E%0A%09%3Cpath%20style%3D%22fill%3A%230C9668%3B%22%20d%3D%22M428%2C130.5c-0.8-0.8-1.6-1.6-3.2-1.6h-22.4c-1.6%2C0-2.4%2C0.8-3.2%2C2.4l-21.6%2C41.6l-2.4%2C4.8%0A%09%09c-4%2C7.2-7.2%2C13.6-9.6%2C20c-3.2-7.2-7.2-15.2-12-24L332%2C132.1c-0.8-1.6-1.6-2.4-3.2-2.4h-22.4c-1.6%2C0-2.4%2C0.8-3.2%2C1.6%0A%09%09c-0.8%2C0.8-0.8%2C2.4%2C0%2C4l47.2%2C86.4v63.2c0%2C2.4%2C1.6%2C4%2C4%2C4h20c2.4%2C0%2C4-1.6%2C4-4v-63.2l50.4-85.6C428.8%2C132.9%2C428.8%2C131.3%2C428%2C130.5z%22%2F%3E%0A%3C%2Fg%3E%0A%3Cpath%20style%3D%22fill%3A%23FFFFFF%3B%22%20d%3D%22M128%2C191.3c12.8-7.2%2C20-19.2%2C20-32.8c0-12.8-4.8-23.2-13.6-29.6c-10.4-8-23.2-12-44-12%0A%09c-12.8%2C0-27.2%2C1.6-36%2C3.2c-1.6%2C0-3.2%2C1.6-3.2%2C4v148.8c0%2C1.6%2C1.6%2C3.2%2C3.2%2C4c4.8%2C0.8%2C15.2%2C1.6%2C30.4%2C1.6c25.6%2C0%2C44-4.8%2C54.4-15.2%0A%09c9.6-8.8%2C13.6-20%2C13.6-32.8C153.6%2C209.7%2C141.6%2C197.7%2C128%2C191.3z%20M92%2C182.5H78.4v-41.6c3.2-0.8%2C8-0.8%2C13.6-0.8%0A%09c29.6%2C0%2C29.6%2C16%2C29.6%2C20.8C120.8%2C173.7%2C109.6%2C182.5%2C92%2C182.5z%20M90.4%2C255.3c-5.6%2C0-9.6%2C0-12.8-0.8v-50.4h12%0A%09c10.4%2C0%2C35.2%2C2.4%2C35.2%2C25.6C125.6%2C252.1%2C104%2C255.3%2C90.4%2C255.3z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23CEE8EF%3B%22%20d%3D%22M76%2C277.7c2.4%2C0%2C5.6%2C0%2C8.8%2C0c25.6%2C0%2C44-4.8%2C54.4-15.2c8-8%2C12.8-17.6%2C13.6-28.8L76%2C277.7z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23FFFFFF%3B%22%20d%3D%22M287.2%2C118.5h-20c-2.4%2C0-4%2C1.6-4%2C4v89.6c0%2C29.6-11.2%2C44-32.8%2C44c-20%2C0-31.2-16-31.2-44v-89.6%0A%09c0-2.4-1.6-4-4-4H176c-2.4%2C0-4%2C1.6-4%2C4v88.8c0%2C59.2%2C36%2C68%2C57.6%2C68c38.4%2C0%2C60.8-25.6%2C60.8-68.8v-88%0A%09C291.2%2C120.1%2C289.6%2C118.5%2C287.2%2C118.5z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23CEE8EF%3B%22%20d%3D%22M264%2C172.1v39.2c0%2C29.6-11.2%2C44-32.8%2C44c-20%2C0-31.2-16-31.2-44v-3.2l-26.4%2C15.2%0A%09c4.8%2C48%2C37.6%2C56%2C57.6%2C56c38.4%2C0%2C60.8-25.6%2C60.8-68.8v-52.8L264%2C172.1z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23FFFFFF%3B%22%20d%3D%22M428%2C120.1c-0.8-0.8-1.6-1.6-3.2-1.6h-22.4c-1.6%2C0-2.4%2C0.8-3.2%2C2.4l-21.6%2C41.6l-2.4%2C4.8%0A%09c-4%2C7.2-7.2%2C13.6-9.6%2C20c-3.2-7.2-7.2-15.2-12-24l-20.8-43.2c-0.8-1.6-1.6-2.4-3.2-2.4h-22.4c-1.6%2C0-2.4%2C0.8-3.2%2C1.6%0A%09c-0.8%2C0.8-0.8%2C2.4%2C0%2C4l47.2%2C86.4v63.2c0%2C2.4%2C1.6%2C4%2C4%2C4h20c2.4%2C0%2C4-1.6%2C4-4v-63.2l50.4-85.6C428.8%2C123.3%2C428.8%2C121.7%2C428%2C120.1z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23CEE8EF%3B%22%20d%3D%22M351.2%2C209.7v63.2c0%2C2.4%2C1.6%2C4%2C4%2C4h20c2.4%2C0%2C4-1.6%2C4-4v-63.2l50.4-85.6c0.8-0.8%2C0.8-2.4%2C0-4%0A%09c-0.8-0.8-1.6-1.6-3.2-1.6H404c-1.6%2C0-2.4%2C0.8-3.2%2C2.4l-21.6%2C41.6l-2.4%2C4.8c-4%2C7.2-7.2%2C13.6-9.6%2C20c-3.2-7.2-7.2-15.2-12-24%0A%09l-16-31.2l-24.8%2C12L351.2%2C209.7z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%2324D35E%3B%22%20d%3D%22M0%2C75.3c0-8.8%2C7.2-16%2C16-16h448c8.8%2C0%2C16%2C7.2%2C16%2C16%22%2F%3E%0A%3Cpath%20style%3D%22opacity%3A0.1%3Bfill%3A%23494946%3Benable-background%3Anew%20%20%20%20%3B%22%20d%3D%22M469.6%2C373.7l-76.8-76.8H420c7.2%2C0%2C14.4-3.2%2C19.2-8%0A%09c4.8-4.8%2C8-12%2C8-19.2c0-15.2-12-27.2-27.2-27.2h-92.8c-14.4%2C0-27.2%2C12.8-27.2%2C27.2v92.8c0%2C15.2%2C12%2C27.2%2C27.2%2C27.2s27.2-12%2C27.2-27.2%0A%09v-26.4l76.8%2C76.8c10.4%2C10.4%2C28%2C10.4%2C38.4%2C0C480.8%2C401.7%2C480.8%2C384.9%2C469.6%2C373.7z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23515150%3B%22%20d%3D%22M420%2C228.1h-92.8c-14.4%2C0-27.2%2C12.8-27.2%2C27.2v92.8c0%2C15.2%2C12%2C27.2%2C27.2%2C27.2s27.2-12%2C27.2-27.2%0A%09v-27.2l76.8%2C76.8c10.4%2C10.4%2C28%2C10.4%2C38.4%2C0s10.4-28%2C0-38.4l-76.8-76.8H420c7.2%2C0%2C14.4-3.2%2C19.2-8c4.8-4.8%2C8-12%2C8-19.2%0A%09C447.2%2C240.1%2C435.2%2C228.1%2C420%2C228.1z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%23494946%3B%22%20d%3D%22M354.4%2C320.9l76.8%2C76.8c10.4%2C10.4%2C28%2C10.4%2C38.4%2C0s10.4-28%2C0-38.4l-76.8-76.8H420%0A%09c7.2%2C0%2C14.4-3.2%2C19.2-8c4.8-4.8%2C8-12%2C8-19.2c0-15.2-12-27.2-27.2-27.2h-92.8%22%2F%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") center center no-repeat;
+	border-bottom: 1px solid #eaeaea;
+}
+#demo-stand a.tf {
+	background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20504.125%20504.125%22%20style%3D%22enable-background%3Anew%200%200%20504.125%20504.125%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20style%3D%22fill%3A%233A7F0D%3B%22%20d%3D%22M339.772%2C0c0%2C0%2C44.536%2C108.954-146.337%2C182.138C89.719%2C221.893%2C10.059%2C323.789%2C105.173%2C481.193%0A%09c7.877-70.357%2C41.653-225.485%2C186.888-260.884c0%2C0-135.176%2C50.546-147.117%2C279.347c69.459%2C9.752%2C232.361%2C16.305%2C280.726-125.062%0A%09C489.536%2C187.817%2C339.772%2C0%2C339.772%2C0z%22%2F%3E%0A%3Cpath%20style%3D%22fill%3A%2349A010%3B%22%20d%3D%22M145.007%2C498.704c147.456-58.849%2C254.748-196.71%2C269.556-361.283C384.418%2C56.107%2C339.772%2C0%2C339.772%2C0%0A%09s44.536%2C108.954-146.337%2C182.138C89.719%2C221.893%2C10.059%2C323.789%2C105.173%2C481.193c7.877-70.357%2C41.653-225.485%2C186.888-260.884%0A%09C292.053%2C220.31%2C157.279%2C270.73%2C145.007%2C498.704z%22%2F%3E%0A%3Ccircle%20style%3D%22fill%3A%233A7F0D%3B%22%20cx%3D%2290.459%22%20cy%3D%22171.985%22%20r%3D%2213.785%22%2F%3E%0A%3Cg%3E%0A%09%3Ccircle%20style%3D%22fill%3A%2349A010%3B%22%20cx%3D%22133.782%22%20cy%3D%22158.2%22%20r%3D%229.846%22%2F%3E%0A%09%3Ccircle%20style%3D%22fill%3A%2349A010%3B%22%20cx%3D%22124.921%22%20cy%3D%2264.662%22%20r%3D%2224.615%22%2F%3E%0A%09%3Ccircle%20style%3D%22fill%3A%2349A010%3B%22%20cx%3D%22200.736%22%20cy%3D%22120.785%22%20r%3D%227.877%22%2F%3E%0A%09%3Ccircle%20style%3D%22fill%3A%2349A010%3B%22%20cx%3D%22266.713%22%20cy%3D%2276.477%22%20r%3D%2222.646%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") center center no-repeat;
+}
+
+
+							/*=== Service Template ===*/
+.nws-service{
+	margin: 20px 0px;
+}
+.nws-service .row{
+	margin-bottom: 25px;
+}
+.nws-service .row:nth-child(even){
+	background-color: #f7f7f7;
+}
+.nws-service .title{
+    padding-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+    display: none;
+}
+.nws-service .nws-brand .title{
+	display: block;
+}
+.nws-service .item{
+	width: 130px;
+    height: 100px;
+    float: left;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    margin: 10px 5px;
+}
+.nws-service .messinfo{
+	border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eee;
+    background-color: #fff;
+    margin: 10px 0px;
+}
+.nws-service .messinfo:hover,
+.nws-service .item.active,
+.nws-service .item:hover{
+	border: 2px 
+	solid #FF7400;
+}
+.nws-service .item span.text{
+	display: block; 
+	line-height: 100px; 
+	text-align: center; 
+	color: #333;
+    font-size: 16px;
+}
+.nws-model .item,
+.nws-model-error .item{
+	height: 50px;
+    overflow: hidden;
+}
+.nws-service .nws-model-error span.text,
+.nws-model .item span.text{
+	line-height: 50px;
+}
+.nws-service .item img{
+	display: block;
+	width: 126px; 
+	height: 96px; 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	border-radius: 3px;
+}
+.nws-service .item:hover img{display: none;}
+
+.single-service .main-info{
+	border: 1px solid #F26522;
+	padding: 25px;
+    border-top-width: 5px; 
+}
+
+
+							/*=== Single service ===*/
+.single-service .main-info .total-box {
+	text-align: right;
+	font-size: 24px;
+    color: #ff7400;
+}
+.single-service .main-info .total-box span{
+	font-size: 20px;
+    color: #8dc63f;
+}
+.single-service .item{
+    display: inline-block;
+    width: 100%;
+}
+.single-service .main-select input{
+	background: #fff; 
+}
+.single-service .select-store .fs-dropdown-options,
+.single-service .select-store button{
+	display: none;
+}
+.single-service .main-select select{
+	z-index: 15;
+	position: relative;
+	opacity: 1; 
+}
+.single-service .btn-submit-service {
+	display: none;
+}
+.single-service form .service-danger{
+	border-color: red;
+}
+.single-service .text-danger{
+	display: inline-block;
+	color: red;
+	font-style: italic;
+	display: none;
+}
+.service-message{
+    font-size: 22px;
+    font-family: cursive;
+}

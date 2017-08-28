@@ -1,0 +1,65 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.numeric-block {
+	background: @color_accent_grey;
+	padding: 45px 45px 70px 45px;
+	position: relative;
+	margin-bottom: 30px;
+	.text {
+		padding-left: 105px;
+	}
+	.number {
+		color: @color_accent_yellow;
+		.fontSize(60);
+		position: absolute;
+		left: 45px;
+		top: 45px;
+	}
+	h4 {
+		margin-bottom: 14px;
+		.fontSize( @h5_font_font_size );
+		.lineHeight( @h5_font_line_height );
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}
+
+.numeric-block:after {
+	content: '';
+	background: @color_accent_black;
+	width: 40px;
+	height: 2px;
+	position: absolute;
+	left: 150px;
+	bottom: 40px;
+	.transition-all( 0.2s );
+}
+
+.numeric-block:hover:after {
+	width: 50%;
+	background: @color_accent_yellow;
+}
+
+@media screen and (max-width: 992px) {
+	.numeric-block {
+		padding: 35px 25px 75px 25px;
+		.text {
+			padding-left: 50px;
+		}
+		h4 {
+			.fontSize( @h5_font_font_size_mobile );
+			.lineHeight( @h5_font_line_height_mobile );
+		}
+		.number {
+			.fontSize(25);
+			left: 25px;
+			top: 35px;
+		}
+	}
+	.numeric-block:after {
+		left: 75px;
+	}
+}

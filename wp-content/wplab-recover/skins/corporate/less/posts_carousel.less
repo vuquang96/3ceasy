@@ -1,0 +1,180 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.shortcode-theme-posts-carousel.style-default {
+	
+	.fs-carousel-viewport {
+		margin-right: -30px;
+	}
+	.fs-carousel-controls {
+		display: none;
+	}
+	.fs-carousel-pagination {
+		bottom: auto;
+		position: static;
+		margin: 30px 0;
+	}
+	.fs-carousel-page {
+		background-color: darken( @bg_alter, 10% );
+	}
+	.fs-carousel-page:hover, .fs-carousel-page.fs-carousel-active {
+		background-color: @color_accent_yellow;
+	}
+	.fs-carousel-control {
+		top: 50%;
+		bottom: auto;
+	}
+	.img img {
+		display: block;
+	}
+	.more {
+		background: @bg_body;
+		padding: 15px 30px;
+		position: absolute;
+		bottom: -100%;
+		left: 0;
+		right: 0;
+		.transition( bottom 0.3s );
+	}
+	.inside {
+		width: 370px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.overlay {
+		position: absolute;
+		left: 0;
+		top: 30%;
+		right: 0;
+		bottom: 0;
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-8 */
+		.transition( top 0.3s );
+	}
+	.title {
+		position: absolute;
+		left: 30px;
+		right: 30px;
+		bottom: 20px;
+		.fontSize( @h6_font_font_size );
+		.lineHeight( @h6_font_line_height );
+		color: #fff;
+		.transition-all( 0.3s );
+	}
+	.item:hover {
+		.title {
+			color: @color_accent_yellow;
+			bottom: 35%;
+		}
+		.overlay {
+			top: 0;
+		}
+		.more {
+			bottom: 0;
+		}
+	} 
+}
+
+@media screen and (max-width: 480px) {
+	.shortcode-theme-posts-carousel.style-default {
+		.inside {
+			width: 320px;	
+		}
+	}
+}
+
+/**
+	Infinite style
+**/
+.shortcode-theme-posts-carousel.style-infinite {
+	.swiper-slide {
+		width: 385px;
+		cursor: move;
+	}
+	img {
+		display: block;
+		position: relative;
+	}
+	.element {
+		position: relative;
+		overflow: hidden;
+	}
+	.view, .link-project {
+		display: inline-block;
+		width: 25px;
+		height: 15px;
+		background-size: 25px 25px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 10px;
+	}
+	.title {
+		display: block;
+		.fontSize(24);
+		line-height: 28px;
+		margin-bottom: 0;
+		color: #fff;
+	}
+	.cats {
+		.fontSize(14);
+		line-height: 1.5em;
+		margin-bottom: 18px;
+		a {
+			color: #898989;
+		}
+		a:hover {
+			color: @color_accent_yellow;
+		}
+	}
+	.title:hover {
+		color: @color_accent_yellow;
+	}
+	.title + .links {
+		margin-top: 18px;
+	}
+	.caption {
+		.box-sizing();
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.7);
+		padding: 0 25px 0 25px;
+		text-align: center;
+		opacity: 0;
+		.transition( opacity 0.3s );
+		.caption-table {
+			display: table;
+			height: 100%;
+			width: 100%;
+		}
+		.caption-cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+	}
+	.swiper-slide:hover {
+		.caption {
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.shortcode-theme-posts-carousel.style-infinite {
+		.swiper-slide {
+			width: 320px;
+		}
+		.title {
+			.fontSize(18);
+			line-height: 1.5em;
+		}
+	}
+}

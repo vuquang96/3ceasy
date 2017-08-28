@@ -1,0 +1,32 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 7, logos.less */
+.logos-shortcode img,
+.logos-shortcode a {
+  display: block;
+}
+/* line 10, logos.less */
+.logos-shortcode a {
+  padding: 20px;
+}
+/* line 15, logos.less */
+.logos-shortcode.with-opacity img {
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0.3;
+  -webkit-transform: translateZ(0);
+  /** Chrome opacity bug fix **/
+}
+/* line 20, logos.less */
+.logos-shortcode.with-opacity img:hover {
+  opacity: 1;
+}

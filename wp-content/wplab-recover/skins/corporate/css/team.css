@@ -1,0 +1,440 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/**
+	Grid style
+**/
+/* line 9, team.less */
+.team-members.style-grid {
+  font-size: 0;
+}
+/* line 11, team.less */
+.team-members.style-grid .item {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 80px;
+  font-size: 16px;
+}
+/* line 18, team.less */
+.team-members.style-grid .photo {
+  padding-bottom: 100px;
+}
+/* line 21, team.less */
+.team-members.style-grid .photo img {
+  float: left;
+}
+/* line 24, team.less */
+.team-members.style-grid .inside {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+/* line 29, team.less */
+.team-members.style-grid .description {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #111111;
+  color: #ffffff;
+  padding: 30px;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 1.35em;
+  overflow: hidden;
+}
+/* line 45, team.less */
+.team-members.style-grid .name {
+  background: #fbfbfb;
+  padding: 22px 30px;
+  clear: both;
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 57, team.less */
+.team-members.style-grid .name h4 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.35em;
+  margin-bottom: 0;
+}
+/* line 64, team.less */
+.team-members.style-grid .name .position {
+  font-family: crimson_textroman;
+  font-style: italic;
+  color: #c2c2c2;
+}
+/* line 69, team.less */
+.team-members.style-grid .name h4,
+.team-members.style-grid .name .position {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 75, team.less */
+.team-members.style-grid .social {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 25px;
+  padding-top: 18px;
+  left: 30px;
+  right: 30px;
+  background: #111111;
+}
+/* line 83, team.less */
+.team-members.style-grid .social a {
+  color: #5a5a5a;
+  margin-right: 14px;
+  font-size: 18px;
+}
+/* line 88, team.less */
+.team-members.style-grid .social a:hover {
+  color: #fcd846;
+}
+/* line 92, team.less */
+.team-members.style-grid .name:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  width: 30px;
+  height: 2px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #111111;
+}
+/* line 102, team.less */
+.team-members.style-grid .name:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 0 15px;
+  border-color: #fcd846 transparent transparent transparent;
+  opacity: 0;
+  -webkit-transition: bottom 0.3s;
+  -moz-transition: bottom 0.3s;
+  -o-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+/* line 116, team.less */
+.team-members.style-grid .item:hover .name {
+  bottom: 100%;
+  margin-bottom: -100px;
+  background: #fcd846;
+  color: #111111;
+}
+/* line 121, team.less */
+.team-members.style-grid .item:hover .name .position {
+  color: #111111;
+}
+/* line 125, team.less */
+.team-members.style-grid .item:hover .name:after {
+  opacity: 0;
+}
+/* line 128, team.less */
+.team-members.style-grid .item:hover .description {
+  opacity: 1;
+}
+/* line 131, team.less */
+.team-members.style-grid .item:hover .name:before {
+  opacity: 1;
+  bottom: -10px;
+}
+@media screen and (max-width: 992px) {
+  /* line 139, team.less */
+  .team-members.style-grid .item {
+    width: 33.3333333%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 144, team.less */
+  .team-members.style-grid .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 149, team.less */
+  .team-members.style-grid .item {
+    width: 100%;
+  }
+}
+/**
+	Grid Corporate style
+**/
+/* line 157, team.less */
+.team-members.style-grid_corporate {
+  font-size: 0;
+}
+/* line 159, team.less */
+.team-members.style-grid_corporate .item {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+/* line 166, team.less */
+.team-members.style-grid_corporate .inside {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+/* line 171, team.less */
+.team-members.style-grid_corporate .photo {
+  position: relative;
+}
+/* line 174, team.less */
+.team-members.style-grid_corporate .photo img {
+  display: block;
+  width: 100%;
+}
+/* line 178, team.less */
+.team-members.style-grid_corporate .inside-text {
+  padding: 20px 30px;
+  background: #fbfbfb;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 192, team.less */
+.team-members.style-grid_corporate .name h4 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-bottom: 8px;
+}
+/* line 198, team.less */
+.team-members.style-grid_corporate .description {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 14px;
+}
+/* line 203, team.less */
+.team-members.style-grid_corporate .position {
+  font-style: italic;
+  font-family: crimson_textroman;
+  color: #c2c2c2;
+}
+/* line 208, team.less */
+.team-members.style-grid_corporate .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 219, team.less */
+.team-members.style-grid_corporate .social {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 100%;
+}
+/* line 224, team.less */
+.team-members.style-grid_corporate .social i.fa {
+  font-size: 20px;
+}
+/* line 227, team.less */
+.team-members.style-grid_corporate .social a {
+  color: #fff;
+  margin: 0 7px;
+}
+/* line 231, team.less */
+.team-members.style-grid_corporate .social a:hover {
+  color: #fcd846;
+}
+/* line 236, team.less */
+.team-members.style-grid_corporate .item:hover .overlay {
+  opacity: 1;
+}
+/* line 239, team.less */
+.team-members.style-grid_corporate .item:hover .inside-text {
+  background: #111111;
+  border-color: #111111;
+  color: #777777;
+}
+/* line 244, team.less */
+.team-members.style-grid_corporate .item:hover .name h4 {
+  color: #fcd846;
+}
+/* line 247, team.less */
+.team-members.style-grid_corporate .item:hover .description {
+  color: #777777;
+}
+/* line 250, team.less */
+.team-members.style-grid_corporate .item:hover .position {
+  color: #ffffff;
+}
+@media screen and (max-width: 992px) {
+  /* line 257, team.less */
+  .team-members.style-grid_corporate .item {
+    width: 33.3333333%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 262, team.less */
+  .team-members.style-grid_corporate .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 267, team.less */
+  .team-members.style-grid_corporate .item {
+    width: 100%;
+  }
+}
+/**
+	List style
+**/
+/* line 276, team.less */
+.team-members.style-list .item {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f3f3f3;
+}
+/* line 280, team.less */
+.team-members.style-list .item .inside {
+  position: relative;
+}
+/* line 283, team.less */
+.team-members.style-list .item .inside.with-photo {
+  padding-left: 300px;
+  min-height: 270px;
+}
+/* line 286, team.less */
+.team-members.style-list .item .inside.with-photo .photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 292, team.less */
+.team-members.style-list .item .photo img {
+  float: left;
+}
+/* line 295, team.less */
+.team-members.style-list .item .social {
+  text-align: center;
+  background: #fbfbfb;
+  padding: 10px 30px;
+  clear: both;
+}
+/* line 300, team.less */
+.team-members.style-list .item .social a {
+  color: #c2c2c2;
+  margin: 0 7px;
+  font-size: 18px;
+}
+/* line 305, team.less */
+.team-members.style-list .item .social a:hover {
+  color: #fcd846;
+}
+/* line 309, team.less */
+.team-members.style-list .item header {
+  position: relative;
+  padding-bottom: 16px;
+}
+/* line 312, team.less */
+.team-members.style-list .item header h4 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.35em;
+  margin-bottom: 6px;
+}
+/* line 319, team.less */
+.team-members.style-list .item header .position {
+  font-family: crimson_textroman;
+  font-style: italic;
+  color: #c2c2c2;
+}
+/* line 325, team.less */
+.team-members.style-list .item header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #111111;
+}
+/* line 336, team.less */
+.team-members.style-list .item:hover h4 {
+  color: #fcd846;
+}
+/* line 340, team.less */
+.team-members.style-list .item:last-of-type {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+/* line 344, team.less */
+.team-members.style-list .theme-collapse-text + [data-readmore-toggle],
+.team-members.style-list .theme-collapse-text[data-readmore] {
+  display: inline-block !important;
+  width: auto !important;
+}
+@media screen and (max-width: 767px) {
+  /* line 353, team.less */
+  .team-members.style-list .item .inside.with-photo {
+    min-height: 1;
+    padding-left: 0;
+  }
+  /* line 356, team.less */
+  .team-members.style-list .item .inside.with-photo .photo {
+    position: relative;
+    float: left;
+    margin-bottom: 24px;
+  }
+  /* line 361, team.less */
+  .team-members.style-list .item .inside.with-photo .description {
+    clear: both;
+  }
+}

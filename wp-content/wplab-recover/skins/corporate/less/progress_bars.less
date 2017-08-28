@@ -1,0 +1,45 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.progress-bar {
+	margin-bottom: 22px;
+	.progress-bar-title {
+		margin-bottom: 5px;
+		.num {
+			color: @color_accent_yellow;
+			.fontSize( 36 );
+			margin-right: 24px;
+		}
+		.title {
+			color: @color_accent_black;
+		}
+	}
+	.progress-bar-value-inner {
+		background-color: @color_accent_grey;
+		height: 20px;
+		.value {
+			height: 20px;
+			.transition( width 1s );
+			background: @color_accent_yellow;
+		  background: repeating-linear-gradient(
+		    45deg,
+		    @color_accent_yellow,
+		    @color_accent_yellow 25%,
+		    darken( @color_accent_yellow, 10% ) 25%,
+		    darken( @color_accent_yellow, 10% ) 50%
+		  );
+		  background-size: 20px 20px;
+		}
+	}
+}
+
+.progress-bar.animated .value {
+	animation: animateStripes 2s linear infinite;
+}
+
+@keyframes animateStripes {
+  from { background-position: 0 0; }
+  to   { background-position: 20px 0; }
+}

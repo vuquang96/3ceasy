@@ -1,0 +1,42 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 7, shop_tabs.less */
+.theme-shop-tabs .title,
+.theme-shop-tabs .product-price .amount {
+  font-size: 20px;
+  line-height: 1.35em;
+}
+/* line 11, shop_tabs.less */
+.theme-shop-tabs .title {
+  color: #111111;
+}
+/* line 14, shop_tabs.less */
+.theme-shop-tabs .title:hover {
+  color: #fcd846;
+}
+/* line 17, shop_tabs.less */
+.theme-shop-tabs ins {
+  text-decoration: none;
+}
+/* line 21, shop_tabs.less */
+.theme-shop-tabs .product-thumb img {
+  display: block;
+  margin-bottom: 25px;
+}
+/* line 26, shop_tabs.less */
+.theme-shop-tabs .product-thumb:hover img {
+  opacity: 0.5;
+}
+@media screen and (max-width: 767px) {
+  /* line 32, shop_tabs.less */
+  .theme-shop-tabs .col {
+    margin-bottom: 25px;
+  }
+}

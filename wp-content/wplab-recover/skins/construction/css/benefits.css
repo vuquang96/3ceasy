@@ -1,0 +1,1349 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/**
+	Shared styles
+**/
+/* line 10, benefits.less */
+.benefits svg path,
+.benefits svg rect,
+.benefits svg polygon {
+  fill: #fcd846;
+}
+/* line 14, benefits.less */
+.benefits i.fa {
+  color: #fcd846;
+}
+/* line 17, benefits.less */
+.benefits .desc {
+  color: #7d7d7d;
+}
+/* line 20, benefits.less */
+.benefits {
+  margin-bottom: 30px;
+}
+/* line 23, benefits.less */
+.benefits .item {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+/**
+	3 columns, photos style
+**/
+/* line 32, benefits.less */
+.benefits.style-3cols_photos {
+  font-size: 0;
+  position: relative;
+  margin: 0 -15px;
+}
+/* line 36, benefits.less */
+.benefits.style-3cols_photos .item {
+  position: relative;
+  width: 33.3333333%;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 15px 20px 15px;
+  margin-bottom: 60px;
+}
+/* line 44, benefits.less */
+.benefits.style-3cols_photos .photo {
+  position: relative;
+}
+/* line 46, benefits.less */
+.benefits.style-3cols_photos .photo img {
+  display: block;
+}
+/* line 49, benefits.less */
+.benefits.style-3cols_photos .photo .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 8px solid #fcd846;
+}
+/* line 60, benefits.less */
+.benefits.style-3cols_photos .photo .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 20px;
+  box-sizing: border-box;
+  padding: 0 20%;
+  line-height: 250px;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* line 71, benefits.less */
+.benefits.style-3cols_photos .photo .title span {
+  color: #fcd846;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 30px;
+}
+/* line 80, benefits.less */
+.benefits.style-3cols_photos h4 {
+  background: #ffffff;
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  margin: -50px 55px 0 55px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #111111;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 91, benefits.less */
+.benefits.style-3cols_photos h4 a {
+  color: #111111;
+}
+/* line 95, benefits.less */
+.benefits.style-3cols_photos .desc {
+  font-family: crimson_textroman;
+  font-style: italic;
+  font-size: 18px;
+  color: #7d7d7d;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* line 102, benefits.less */
+.benefits.style-3cols_photos .item:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* line 114, benefits.less */
+.benefits.style-3cols_photos .item:hover .photo .overlay {
+  opacity: 1;
+}
+/* line 117, benefits.less */
+.benefits.style-3cols_photos .item:hover .title {
+  top: 0;
+  opacity: 1;
+}
+/* line 121, benefits.less */
+.benefits.style-3cols_photos .item:hover h4 {
+  opacity: 0;
+}
+/* line 124, benefits.less */
+.benefits.style-3cols_photos .item:hover .desc {
+  margin-top: -20px;
+}
+/* line 128, benefits.less */
+.benefits.style-3cols_photos .item:hover:after {
+  margin-left: 0;
+  left: 5%;
+  width: 90%;
+  background: #fcd846;
+}
+/* line 136, benefits.less */
+body.rtl .benefits.style-3cols .item {
+  border-right: 1px solid #f3f3f3;
+}
+@media screen and (max-width: 1199px) {
+  /* line 142, benefits.less */
+  .benefits.style-3cols_photos h4,
+  .benefits.style-3cols_photos .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 151, benefits.less */
+  .benefits.style-3cols_photos .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 159, benefits.less */
+  .benefits.style-3cols_photos .item {
+    width: 100%;
+    max-width: 370px;
+  }
+  /* line 163, benefits.less */
+  .benefits.style-3cols_photos .overlay,
+  .benefits.style-3cols_photos .title {
+    display: none;
+  }
+  /* line 166, benefits.less */
+  .benefits.style-3cols_photos .item:hover h4 {
+    opacity: 1;
+  }
+  /* line 169, benefits.less */
+  .benefits.style-3cols_photos .item:hover .desc {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 177, benefits.less */
+  body.rtl .benefits.style-3cols .item,
+  body.rtl .benefits.style-3cols .item:nth-child(3n) {
+    border-left: 1px solid #f3f3f3;
+  }
+}
+/**
+	3 columns
+**/
+/* line 186, benefits.less */
+.benefits.style-3cols {
+  font-size: 0;
+  position: relative;
+}
+/* line 189, benefits.less */
+.benefits.style-3cols .icon {
+  margin-bottom: 14px;
+  min-height: 80px;
+}
+/* line 193, benefits.less */
+.benefits.style-3cols h4 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #111111;
+  margin-bottom: 14px;
+}
+/* line 200, benefits.less */
+.benefits.style-3cols .desc {
+  font-size: 18px;
+  color: #7d7d7d;
+}
+/* line 204, benefits.less */
+.benefits.style-3cols .item {
+  position: relative;
+  width: 33.3333333%;
+  font-size: 16px;
+  text-align: center;
+  padding: 40px 30px 90px 30px;
+  border-right: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+  -webkit-transition: 0.2s background-color;
+  -moz-transition: 0.2s background-color;
+  -o-transition: 0.2s background-color;
+  transition: 0.2s background-color;
+}
+/* line 214, benefits.less */
+.benefits.style-3cols .item:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -20px;
+}
+/* line 224, benefits.less */
+.benefits.style-3cols .item:nth-child(3n) {
+  border-right: 0;
+}
+/* line 227, benefits.less */
+.benefits.style-3cols .item:hover {
+  background-color: #fcd846;
+  border-color: #fcd846;
+}
+/* line 230, benefits.less */
+.benefits.style-3cols .item:hover h4,
+.benefits.style-3cols .item:hover .desc,
+.benefits.style-3cols .item:hover i.fa {
+  color: #111111;
+}
+/* line 234, benefits.less */
+.benefits.style-3cols .item:hover svg path,
+.benefits.style-3cols .item:hover svg rect,
+.benefits.style-3cols .item:hover svg polygon {
+  fill: #111111;
+}
+/* line 239, benefits.less */
+.benefits.style-3cols svg,
+.benefits.style-3cols img {
+  width: 70px;
+  height: auto;
+}
+/* line 243, benefits.less */
+.benefits.style-3cols .fa {
+  font-size: 70px;
+}
+/* line 247, benefits.less */
+.ie .benefits.style-3cols svg {
+  height: 70px;
+}
+/* line 250, benefits.less */
+.benefits.style-3cols:after,
+.benefits.style-3cols_third:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: #ffffff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  /* line 261, benefits.less */
+  .benefits.style-3cols .item,
+  .benefits.style-3cols .item:nth-child(3n) {
+    width: 50%;
+    border-right: 1px solid #f3f3f3;
+  }
+  /* line 265, benefits.less */
+  .benefits.style-3cols .item:nth-child(2n) {
+    border-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 271, benefits.less */
+  .benefits.style-3cols .item,
+  .benefits.style-3cols .item:nth-child(3n),
+  .benefits.style-3cols .item:nth-child(2n) {
+    border-right: 0;
+    width: 100%;
+  }
+}
+/**
+	3 columns alt style
+**/
+/* line 280, benefits.less */
+.benefits.style-3cols_alt {
+  font-size: 0;
+  margin-bottom: 0;
+  position: relative;
+}
+/* line 284, benefits.less */
+.benefits.style-3cols_alt .item {
+  position: relative;
+  width: 33.3333333%;
+  font-size: 16px;
+  padding: 0 45px 0px 70px;
+}
+/* line 290, benefits.less */
+.benefits.style-3cols_alt .item.no-icon {
+  padding: 0 45px 0px 0;
+}
+/* line 293, benefits.less */
+.benefits.style-3cols_alt .desc {
+  margin-bottom: 60px;
+  font-family: crimson_textroman;
+  font-style: italic;
+  font-size: 18px;
+  color: #7d7d7d;
+}
+/* line 300, benefits.less */
+.benefits.style-3cols_alt h4 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 14px;
+}
+/* line 308, benefits.less */
+.benefits.style-3cols_alt svg,
+.benefits.style-3cols_alt img {
+  width: 50px;
+  height: auto;
+}
+/* line 312, benefits.less */
+.benefits.style-3cols_alt .fa {
+  font-size: 50px;
+}
+/* line 315, benefits.less */
+.benefits.style-3cols_alt .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 322, benefits.less */
+.ie .benefits.style-3cols_alt svg {
+  height: 50px;
+}
+@media screen and (max-width: 767px) {
+  /* line 327, benefits.less */
+  .benefits.style-3cols_alt .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 332, benefits.less */
+  .benefits.style-3cols_alt .item {
+    width: 100%;
+  }
+  /* line 335, benefits.less */
+  .benefits.style-3cols_alt .desc {
+    margin-bottom: 30px;
+  }
+}
+/**
+	3 columns, third style
+**/
+/* line 343, benefits.less */
+.benefits.style-3cols_third {
+  font-size: 0;
+  margin-bottom: 0;
+}
+/* line 346, benefits.less */
+.benefits.style-3cols_third .item {
+  position: relative;
+  background-color: #ffffff;
+  width: 33.3333333%;
+  font-size: 16px;
+  padding: 60px 50px 95px 50px;
+  text-align: center;
+  border-right: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+  -webkit-transition: 0.1s background-color;
+  -moz-transition: 0.1s background-color;
+  -o-transition: 0.1s background-color;
+  transition: 0.1s background-color;
+}
+/* line 357, benefits.less */
+.benefits.style-3cols_third .item:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 368, benefits.less */
+.benefits.style-3cols_third .item:nth-child(3n) {
+  border-right: 0;
+}
+/* line 371, benefits.less */
+.benefits.style-3cols_third .item:hover {
+  border-color: #fcd846;
+  background-color: #fcd846;
+}
+/* line 374, benefits.less */
+.benefits.style-3cols_third .item:hover h4,
+.benefits.style-3cols_third .item:hover .desc,
+.benefits.style-3cols_third .item:hover i.fa {
+  color: #111111;
+}
+/* line 378, benefits.less */
+.benefits.style-3cols_third .item:hover svg path,
+.benefits.style-3cols_third .item:hover svg rect,
+.benefits.style-3cols_third .item:hover svg polygon {
+  fill: #111111;
+}
+/* line 383, benefits.less */
+.benefits.style-3cols_third .item:hover:after {
+  background: #111111;
+  width: 170px;
+  margin-left: -85px;
+}
+/* line 388, benefits.less */
+.benefits.style-3cols_third .item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  background-color: transparent;
+  -webkit-clip-path: polygon(50% 85%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 85%, 0% 100%, 100% 100%);
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+/* line 400, benefits.less */
+.benefits.style-3cols_third .item:hover:before {
+  top: -120px;
+  background-color: #fcd846;
+}
+/* line 404, benefits.less */
+.benefits.style-3cols_third svg,
+.benefits.style-3cols_third img {
+  width: 130px;
+  height: auto;
+}
+/* line 408, benefits.less */
+.benefits.style-3cols_third .fa {
+  font-size: 130px;
+}
+/* line 411, benefits.less */
+.benefits.style-3cols_third .icon {
+  margin-bottom: 40px;
+}
+/* line 414, benefits.less */
+.benefits.style-3cols_third h4 {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 44px;
+  color: #111111;
+  margin-bottom: 14px;
+}
+/* line 421, benefits.less */
+.benefits.style-3cols_third .desc {
+  font-size: 18px;
+  color: #7d7d7d;
+  font-family: crimson_textroman;
+  font-style: italic;
+}
+/* line 429, benefits.less */
+.ie .benefits.style-3cols_third svg {
+  height: 130px;
+}
+@media screen and (max-width: 992px) {
+  /* line 434, benefits.less */
+  .benefits.style-3cols_third .item,
+  .benefits.style-3cols_third .item:nth-child(3n) {
+    width: 50%;
+    border-right: 1px solid #f3f3f3;
+  }
+  /* line 438, benefits.less */
+  .benefits.style-3cols_third .item:nth-child(2n) {
+    border-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 444, benefits.less */
+  .benefits.style-3cols_third .item,
+  .benefits.style-3cols_third .item:nth-child(3n),
+  .benefits.style-3cols_third .item:nth-child(2n) {
+    border-right: 0;
+    width: 100%;
+  }
+  /* line 448, benefits.less */
+  .benefits.style-3cols_third h4 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+/**
+	3 columns, fourth style
+**/
+/* line 457, benefits.less */
+.benefits.style-3cols_fourth {
+  font-size: 0;
+  margin-bottom: 0;
+}
+/* line 460, benefits.less */
+.benefits.style-3cols_fourth .item {
+  position: relative;
+  background-color: #ffffff;
+  width: 33.3333333%;
+  font-size: 16px;
+  padding: 60px 50px 95px 50px;
+  text-align: center;
+  border-right: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+  -webkit-transition: 0.1s background-color;
+  -moz-transition: 0.1s background-color;
+  -o-transition: 0.1s background-color;
+  transition: 0.1s background-color;
+}
+/* line 471, benefits.less */
+.benefits.style-3cols_fourth .item:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 482, benefits.less */
+.benefits.style-3cols_fourth .item:nth-child(3n) {
+  border-right: 0;
+}
+/* line 485, benefits.less */
+.benefits.style-3cols_fourth .item:hover {
+  border-color: #fcd846;
+  background-color: #fcd846;
+}
+/* line 488, benefits.less */
+.benefits.style-3cols_fourth .item:hover h4,
+.benefits.style-3cols_fourth .item:hover .desc,
+.benefits.style-3cols_fourth .item:hover i.fa {
+  color: #111111;
+}
+/* line 492, benefits.less */
+.benefits.style-3cols_fourth .item:hover svg path,
+.benefits.style-3cols_fourth .item:hover svg rect,
+.benefits.style-3cols_fourth .item:hover svg polygon {
+  fill: #111111;
+}
+/* line 497, benefits.less */
+.benefits.style-3cols_fourth .item:hover:after {
+  background: #111111;
+  width: 170px;
+  margin-left: -85px;
+}
+/* line 502, benefits.less */
+.benefits.style-3cols_fourth .item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  background-color: transparent;
+  -webkit-clip-path: polygon(50% 85%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 85%, 0% 100%, 100% 100%);
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+/* line 514, benefits.less */
+.benefits.style-3cols_fourth .item:hover:before {
+  top: -120px;
+  background-color: #fcd846;
+}
+/* line 518, benefits.less */
+.benefits.style-3cols_fourth svg,
+.benefits.style-3cols_fourth img {
+  width: 70px;
+  height: auto;
+}
+/* line 522, benefits.less */
+.benefits.style-3cols_fourth .fa {
+  font-size: 70px;
+}
+/* line 525, benefits.less */
+.benefits.style-3cols_fourth .icon {
+  margin-bottom: 20px;
+}
+/* line 528, benefits.less */
+.benefits.style-3cols_fourth h4 {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  color: #111111;
+  margin-bottom: 14px;
+}
+/* line 535, benefits.less */
+.benefits.style-3cols_fourth .desc {
+  font-size: 18px;
+  color: #7d7d7d;
+  font-family: crimson_textroman;
+  font-style: italic;
+}
+/* line 543, benefits.less */
+body.rtl .benefits.style-3cols_fourth {
+  border-left: 1px solid #f3f3f3;
+}
+/* line 547, benefits.less */
+.ie .benefits.style-3cols_fourth svg {
+  height: 70px;
+}
+@media screen and (max-width: 992px) {
+  /* line 552, benefits.less */
+  .benefits.style-3cols_fourth .item,
+  .benefits.style-3cols_fourth .item:nth-child(3n) {
+    width: 50%;
+    border-right: 1px solid #f3f3f3;
+  }
+  /* line 556, benefits.less */
+  .benefits.style-3cols_fourth .item:nth-child(2n) {
+    border-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 562, benefits.less */
+  body.rtl .benefits.style-3cols_fourth .item,
+  body.rtl .benefits.style-3cols_fourth .item:nth-child(3n) {
+    border-left: 1px solid #f3f3f3;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 569, benefits.less */
+  .benefits.style-3cols_fourth .item,
+  .benefits.style-3cols_fourth .item:nth-child(3n),
+  .benefits.style-3cols_fourth .item:nth-child(2n) {
+    border-right: 0;
+    width: 100%;
+  }
+}
+/**
+	2 columns style
+**/
+/* line 578, benefits.less */
+.benefits.style-2cols {
+  font-size: 0;
+  margin-bottom: 0;
+}
+/* line 581, benefits.less */
+.benefits.style-2cols .item {
+  width: 50%;
+  position: relative;
+  padding: 0 75px 30px 200px;
+  font-size: 16px;
+  margin-bottom: 75px;
+}
+/* line 588, benefits.less */
+.benefits.style-2cols .item:after {
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  left: 200px;
+  bottom: 0;
+}
+/* line 599, benefits.less */
+.benefits.style-2cols .item:hover h4,
+.benefits.style-2cols .item:hover i.fa {
+  color: #fcd846;
+}
+/* line 603, benefits.less */
+.benefits.style-2cols .item:hover svg path,
+.benefits.style-2cols .item:hover svg rect,
+.benefits.style-2cols .item:hover svg polygon {
+  fill: #fcd846;
+}
+/* line 607, benefits.less */
+.benefits.style-2cols .item:hover .desc {
+  color: #111111;
+}
+/* line 611, benefits.less */
+.benefits.style-2cols .item.no-icon {
+  padding-left: 0;
+}
+/* line 614, benefits.less */
+.benefits.style-2cols .item.no-icon:after {
+  left: 0;
+}
+/* line 617, benefits.less */
+.benefits.style-2cols .item:hover:after {
+  background: #fcd846;
+  width: 30%;
+}
+/* line 621, benefits.less */
+.benefits.style-2cols .desc {
+  color: #7d7d7d;
+}
+/* line 624, benefits.less */
+.benefits.style-2cols .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 629, benefits.less */
+.benefits.style-2cols svg,
+.benefits.style-2cols img {
+  width: 140px;
+  height: auto;
+}
+/* line 633, benefits.less */
+.benefits.style-2cols .fa {
+  font-size: 140px;
+  color: #111111;
+}
+/* line 638, benefits.less */
+.benefits.style-2cols svg path,
+.benefits.style-2cols svg rect,
+.benefits.style-2cols svg polygon {
+  fill: #111111;
+}
+/* line 642, benefits.less */
+.benefits.style-2cols h4 {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+/* line 650, benefits.less */
+.ie .benefits.style-2cols svg {
+  height: 140px;
+}
+@media screen and (max-width: 992px) {
+  /* line 656, benefits.less */
+  .benefits.style-2cols .item {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 665, benefits.less */
+  .benefits.style-2cols .item {
+    padding-left: 100px;
+  }
+  /* line 668, benefits.less */
+  .benefits.style-2cols .item.no-icon {
+    padding-left: 0;
+  }
+  /* line 671, benefits.less */
+  .benefits.style-2cols .item:after {
+    left: 100px;
+  }
+  /* line 674, benefits.less */
+  .benefits.style-2cols .item.no-icon:after {
+    left: 0;
+  }
+  /* line 677, benefits.less */
+  .benefits.style-2cols svg,
+  .benefits.style-2cols img {
+    width: 80px;
+  }
+  /* line 680, benefits.less */
+  .benefits.style-2cols .fa {
+    font-size: 80px;
+  }
+  /* line 683, benefits.less */
+  .benefits.style-2cols h4 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+/**
+	3 columns full-width style
+**/
+/* line 693, benefits.less */
+.benefits.style-3cols_fullwidth {
+  background: #fcd846;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+/* line 698, benefits.less */
+.benefits.style-3cols_fullwidth .col {
+  position: relative;
+  padding: 115px 30px;
+  z-index: 3;
+}
+/* line 702, benefits.less */
+.benefits.style-3cols_fullwidth .col .text {
+  padding-left: 180px;
+}
+/* line 706, benefits.less */
+.benefits.style-3cols_fullwidth .col.col-num-2 {
+  background: #fbd123;
+}
+/* line 709, benefits.less */
+.benefits.style-3cols_fullwidth .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 713, benefits.less */
+.benefits.style-3cols_fullwidth .col.no-icon .text {
+  padding-left: 0;
+}
+/* line 716, benefits.less */
+.benefits.style-3cols_fullwidth .icon {
+  position: absolute;
+  width: 140px;
+}
+/* line 720, benefits.less */
+.benefits.style-3cols_fullwidth h4 {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 300;
+  color: #111111;
+  margin-bottom: 14px;
+}
+/* line 727, benefits.less */
+.benefits.style-3cols_fullwidth .desc,
+.benefits.style-3cols_fullwidth i.fa {
+  color: #111111;
+}
+/* line 730, benefits.less */
+.benefits.style-3cols_fullwidth i.fa {
+  font-size: 140px;
+}
+/* line 734, benefits.less */
+.benefits.style-3cols_fullwidth svg path,
+.benefits.style-3cols_fullwidth svg rect,
+.benefits.style-3cols_fullwidth svg polygon {
+  fill: #111111;
+}
+/* line 739, benefits.less */
+.benefits.style-3cols_fullwidth:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fbcc0f;
+}
+@media screen and (max-width: 1399px) {
+  /* line 752, benefits.less */
+  .benefits.style-3cols_fullwidth .col .text {
+    padding-left: 0;
+  }
+  /* line 755, benefits.less */
+  .benefits.style-3cols_fullwidth .col {
+    padding: 40px 30px;
+  }
+  /* line 758, benefits.less */
+  .benefits.style-3cols_fullwidth .icon {
+    display: block;
+    position: static;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 765, benefits.less */
+  .benefits.style-3cols_fullwidth:after {
+    display: none;
+  }
+  /* line 769, benefits.less */
+  .benefits.style-3cols_fullwidth .col.col-num-3 {
+    background: #fbcc0f;
+  }
+  /* line 772, benefits.less */
+  .benefits.style-3cols_fullwidth .col {
+    padding: 40px 15px;
+  }
+  /* line 775, benefits.less */
+  .benefits.style-3cols_fullwidth .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 779, benefits.less */
+  .benefits.style-3cols_fullwidth h4 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+/**
+	3 columns corporate style
+**/
+/* line 789, benefits.less */
+.benefits.style-3cols_corporate {
+  font-size: 0;
+}
+/* line 791, benefits.less */
+.benefits.style-3cols_corporate .item {
+  position: relative;
+  padding: 0 35px 30px 35px;
+  text-align: center;
+  width: 33.3333333%;
+  margin-bottom: 55px;
+  font-size: 16px;
+}
+/* line 799, benefits.less */
+.benefits.style-3cols_corporate .item svg,
+.benefits.style-3cols_corporate .item img {
+  width: 80px;
+  height: auto;
+}
+/* line 804, benefits.less */
+.benefits.style-3cols_corporate .item i.fa {
+  font-size: 80px;
+}
+/* line 808, benefits.less */
+.benefits.style-3cols_corporate .item svg,
+.benefits.style-3cols_corporate .item img,
+.benefits.style-3cols_corporate .item i.fa {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 814, benefits.less */
+.benefits.style-3cols_corporate .icon {
+  display: block;
+  margin-bottom: 18px;
+}
+/* line 818, benefits.less */
+.benefits.style-3cols_corporate .desc {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+/* line 822, benefits.less */
+.benefits.style-3cols_corporate h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+/* line 828, benefits.less */
+.benefits.style-3cols_corporate .item:after {
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 0;
+}
+/* line 840, benefits.less */
+.benefits.style-3cols_corporate .item:hover h4,
+.benefits.style-3cols_corporate .item:hover i.fa {
+  color: #fcd846;
+}
+/* line 844, benefits.less */
+.benefits.style-3cols_corporate .item:hover svg path,
+.benefits.style-3cols_corporate .item:hover svg rect,
+.benefits.style-3cols_corporate .item:hover svg polygon {
+  fill: #fcd846;
+}
+/* line 849, benefits.less */
+.benefits.style-3cols_corporate .item:hover:after {
+  background: #fcd846;
+  width: 170px;
+  margin-left: -85px;
+}
+/* line 856, benefits.less */
+.ie .benefits.style-3cols_corporate svg {
+  height: 80px;
+}
+@media screen and (max-width: 992px) {
+  /* line 862, benefits.less */
+  .benefits.style-3cols_corporate .item {
+    width: 50%;
+  }
+  /* line 865, benefits.less */
+  .benefits.style-3cols_corporate h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 874, benefits.less */
+  .benefits.style-3cols_corporate .item {
+    width: 100%;
+  }
+}
+/**
+	3 columns corporate (left icons) style
+**/
+/* line 883, benefits.less */
+.benefits.style-3cols_corporate_alt {
+  font-size: 0;
+}
+/* line 885, benefits.less */
+.benefits.style-3cols_corporate_alt .item {
+  position: relative;
+  padding: 10px 15px 30px 80px;
+  width: 33.3333333%;
+  margin-bottom: 55px;
+  font-size: 16px;
+}
+/* line 892, benefits.less */
+.benefits.style-3cols_corporate_alt .item svg,
+.benefits.style-3cols_corporate_alt .item img {
+  width: 50px;
+  height: auto;
+}
+/* line 897, benefits.less */
+.benefits.style-3cols_corporate_alt .item i.fa {
+  font-size: 50px;
+}
+/* line 902, benefits.less */
+.benefits.style-3cols_corporate_alt .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 907, benefits.less */
+.benefits.style-3cols_corporate_alt .desc {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+/* line 911, benefits.less */
+.benefits.style-3cols_corporate_alt h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+/* line 917, benefits.less */
+.benefits.style-3cols_corporate_alt .item:after {
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 2px;
+  background: #111111;
+  left: 80px;
+  bottom: 0;
+}
+/* line 928, benefits.less */
+.benefits.style-3cols_corporate_alt .item:hover h4,
+.benefits.style-3cols_corporate_alt .item:hover i.fa {
+  color: #fcd846;
+}
+/* line 932, benefits.less */
+.benefits.style-3cols_corporate_alt .item:hover svg path,
+.benefits.style-3cols_corporate_alt .item:hover svg rect,
+.benefits.style-3cols_corporate_alt .item:hover svg polygon {
+  fill: #fcd846;
+}
+/* line 937, benefits.less */
+.benefits.style-3cols_corporate_alt .item:hover:after {
+  background: #fcd846;
+  width: 170px;
+}
+/* line 943, benefits.less */
+.ie .benefits.style-3cols_corporate_alt svg {
+  height: 50px;
+}
+@media screen and (max-width: 992px) {
+  /* line 949, benefits.less */
+  .benefits.style-3cols_corporate_alt .item {
+    width: 50%;
+    padding-right: 0;
+  }
+  /* line 953, benefits.less */
+  .benefits.style-3cols_corporate_alt h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 962, benefits.less */
+  .benefits.style-3cols_corporate_alt .item {
+    width: 100%;
+  }
+}
+/**
+	3 columns corporate (boxed) style
+**/
+/* line 971, benefits.less */
+.benefits.style-3cols_corporate_second {
+  font-size: 0;
+}
+/* line 973, benefits.less */
+.benefits.style-3cols_corporate_second .item {
+  position: relative;
+  text-align: center;
+  width: 33.3333333%;
+  font-size: 16px;
+}
+/* line 979, benefits.less */
+.benefits.style-3cols_corporate_second .item svg,
+.benefits.style-3cols_corporate_second .item img {
+  width: 70px;
+  height: auto;
+}
+/* line 984, benefits.less */
+.benefits.style-3cols_corporate_second .item i.fa {
+  font-size: 70px;
+}
+/* line 989, benefits.less */
+.benefits.style-3cols_corporate_second .item-inside {
+  background: #fbfbfb;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 0 15px 30px 15px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 997, benefits.less */
+.benefits.style-3cols_corporate_second .item:hover .item-inside {
+  border-color: #fcd846;
+  background: transparent;
+}
+/* line 1001, benefits.less */
+.benefits.style-3cols_corporate_second h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+/* line 1007, benefits.less */
+.benefits.style-3cols_corporate_second .icon {
+  margin-bottom: 10px;
+}
+/* line 1010, benefits.less */
+.benefits.style-3cols_corporate_second .desc {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+/* line 1016, benefits.less */
+.ie .benefits.style-3cols_corporate_second svg {
+  height: 70px;
+}
+@media screen and (max-width: 992px) {
+  /* line 1022, benefits.less */
+  .benefits.style-3cols_corporate_second .item {
+    width: 50%;
+    padding-right: 0;
+  }
+  /* line 1026, benefits.less */
+  .benefits.style-3cols_corporate_second h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1035, benefits.less */
+  .benefits.style-3cols_corporate_second .item {
+    width: 100%;
+  }
+}
+/**
+	3 columns corporate (photo) style
+**/
+/* line 1044, benefits.less */
+.benefits.style-3cols_corporate_third {
+  font-size: 0;
+  position: relative;
+  margin: 0 -15px;
+}
+/* line 1048, benefits.less */
+.benefits.style-3cols_corporate_third .item {
+  position: relative;
+  width: 33.3333333%;
+  font-size: 16px;
+  padding: 0 15px 20px 15px;
+  margin-bottom: 15px;
+}
+/* line 1055, benefits.less */
+.benefits.style-3cols_corporate_third .photo {
+  position: relative;
+}
+/* line 1057, benefits.less */
+.benefits.style-3cols_corporate_third .photo img {
+  display: block;
+}
+/* line 1060, benefits.less */
+.benefits.style-3cols_corporate_third .photo .overlay {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 1071, benefits.less */
+.benefits.style-3cols_corporate_third .photo .title {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 25px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 1083, benefits.less */
+.benefits.style-3cols_corporate_third h4 {
+  display: none;
+}
+/* line 1086, benefits.less */
+.benefits.style-3cols_corporate_third .desc {
+  font-size: 14px;
+  color: #7d7d7d;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 20px 30px;
+  line-height: 1.5em;
+  background: #fbfbfb;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+/* line 1100, benefits.less */
+.benefits.style-3cols_corporate_third .item:hover .photo .overlay {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+}
+/* line 1105, benefits.less */
+.benefits.style-3cols_corporate_third .item:hover .photo .title {
+  color: #fcd846;
+}
+/* line 1109, benefits.less */
+.benefits.style-3cols_corporate_third .item:hover .desc {
+  border-color: #111111;
+  background-color: #111111;
+  color: #ffffff;
+}
+@media screen and (max-width: 1199px) {
+  /* line 1119, benefits.less */
+  .benefits.style-3cols_corporate_third h4,
+  .benefits.style-3cols_corporate_third .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 1128, benefits.less */
+  .benefits.style-3cols_corporate_third .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1136, benefits.less */
+  .benefits.style-3cols_corporate_third .item {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  /* line 1144, benefits.less */
+  .benefits.style-3cols_third .item:before,
+  .benefits.style-3cols_fourth .item:before {
+    display: none !important;
+  }
+}
+/* line 1151, benefits.less */
+.ie .benefits.style-3cols_third .item:before,
+.ie .benefits.style-3cols_fourth .item:before {
+  display: none !important;
+}

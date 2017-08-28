@@ -1,0 +1,98 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 6, quote.less */
+blockquote.style-big_photo {
+  padding: 100px 0 100px 450px;
+}
+/* line 9, quote.less */
+blockquote.style-big_photo:before {
+  font-size: 150px;
+  color: #fcd846;
+  left: 400px;
+}
+/* line 14, quote.less */
+blockquote.style-small_photo_alt {
+  padding: 70px 0 0 50px;
+}
+/* line 17, quote.less */
+blockquote.style-small_photo_alt svg {
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 23, quote.less */
+blockquote.style-small_photo_alt svg path,
+blockquote.style-small_photo_alt svg rect,
+blockquote.style-small_photo_alt svg polygon {
+  fill: #fcd846;
+}
+/* line 27, quote.less */
+blockquote.style-small_photo_alt:before,
+blockquote.style-boxed:before {
+  display: none;
+}
+/* line 31, quote.less */
+blockquote.style-boxed {
+  padding: 0;
+}
+/* line 34, quote.less */
+blockquote.style-boxed .quote-content {
+  background-color: #f3f3f3;
+  padding: 35px 40px;
+  font-size: 24px;
+  line-height: 1.25em;
+  margin-bottom: 40px;
+  position: relative;
+}
+/* line 41, quote.less */
+blockquote.style-boxed .quote-content .fw-page-builder-content {
+  margin-bottom: 0;
+}
+/* line 45, quote.less */
+blockquote.style-boxed .quote-content:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  left: 0;
+  bottom: -60px;
+  border-color: transparent #eeeeee transparent transparent;
+}
+/* line 57, quote.less */
+body.rtl blockquote.style-boxed .quote-content:after {
+  border-color: transparent transparent transparent #eeeeee;
+}
+/* line 61, quote.less */
+blockquote.style-boxed .quote-data {
+  padding-left: 100px;
+}
+@media screen and (max-width: 767px) {
+  /* line 65, quote.less */
+  blockquote.style-big_photo {
+    padding: 0 0 0 80px !important;
+    background: none !important;
+  }
+  /* line 69, quote.less */
+  blockquote.style-big_photo:before {
+    left: 0;
+  }
+  /* line 72, quote.less */
+  blockquote.style-small_photo_alt {
+    padding: 0;
+  }
+  /* line 75, quote.less */
+  blockquote.style-small_photo_alt svg {
+    display: none;
+  }
+}

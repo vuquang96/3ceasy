@@ -7,7 +7,7 @@
 	Author URI: http://themeforest.net/user/wplab/?ref=wplab
 	License URI: http://themeforest.net/licenses/regular_extended
 	Description: Recover — Amazing multi-purpose premium WordPress theme
-	Version: 1.8.8
+	Version: 1.8.9
 	Tags: yellow, green, blue, white, one-column, two-columns, right-sidebar, fluid-layout, custom-menu, featured-images, post-formats, sticky-post, translation-ready
 	License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself. You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
 */
@@ -71,7 +71,7 @@
 }
 
 
-/*Service Template*/
+							/*=== Service Template ===*/
 .nws-service{
 	margin: 20px 0px;
 }
@@ -149,7 +149,10 @@
     border-top-width: 5px; 
 }
 
-/*Single service*/
+
+							/*=== Single service ===*/
+.single-service .breadcrumbs{display: none;}
+.single-service form button a{color: #fff;}
 .single-service .main-info .total-box {
 	text-align: right;
 	font-size: 24px;

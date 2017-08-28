@@ -1,0 +1,32 @@
+// ==ClosureCompiler==
+// @compilation_level WHITESPACE_ONLY
+// @output_file_name libs.min.js
+// @code_url http://static.wplab.pro/dev_js/blazy.js
+// @code_url http://static.wplab.pro/dev_js/readmore.min.js
+// @code_url http://static.wplab.pro/dev_js/headroom.min.js
+// @code_url http://static.wplab.pro/dev_js/jQuery.headroom.min.js
+// @code_url http://static.wplab.pro/dev_js/isotope.pkgd.min.js
+// @code_url http://static.wplab.pro/dev_js/jquery.easing.min.js
+// @code_url http://static.wplab.pro/dev_js/jquery.singleNav.min.js
+// @code_url http://static.wplab.pro/dev_js/jquery.placeholder.min.js
+// @code_url http://static.wplab.pro/dev_js/formstone.core.js
+// @code_url http://static.wplab.pro/dev_js/formstone.touch.js
+// @code_url http://static.wplab.pro/dev_js/formstone.mediaquery.js
+// @code_url http://static.wplab.pro/dev_js/formstone.swap.js
+// @code_url http://static.wplab.pro/dev_js/formstone.scrollbar.js
+// @code_url http://static.wplab.pro/dev_js/formstone.dropdown.js
+// @code_url http://static.wplab.pro/dev_js/formstone.checkbox.js
+// @code_url http://static.wplab.pro/dev_js/formstone.tabs.js
+// @code_url http://static.wplab.pro/dev_js/formstone.carousel.js
+// @code_url http://static.wplab.pro/dev_js/jquery.waitforimages.js
+// @code_url http://static.wplab.pro/dev_js/modernizr.custom.js
+// @code_url http://static.wplab.pro/dev_js/numinate.1.0.1.min.js
+// @code_url http://static.wplab.pro/dev_js/retina.min.js
+// @code_url http://static.wplab.pro/dev_js/wow.min.js
+// @code_url http://static.wplab.pro/dev_js/parallax.min.js
+// @code_url http://static.wplab.pro/dev_js/loaders.css.js
+// @code_url http://static.wplab.pro/dev_js/sweet-alert.min.js
+// @code_url http://static.wplab.pro/dev_js/jquery.fitvids.js
+// @code_url http://static.wplab.pro/dev_js/nivo-lightbox.min.js
+// @code_url http://static.wplab.pro/dev_js/jquery.sticky-kit.min.js
+// ==/ClosureCompiler==

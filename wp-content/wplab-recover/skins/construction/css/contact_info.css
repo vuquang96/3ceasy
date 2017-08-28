@@ -1,0 +1,62 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 7, contact_info.less */
+.contact-info-shortcode .content-row {
+  border-bottom: 1px solid #f3f3f3;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
+  min-height: 75px;
+}
+/* line 14, contact_info.less */
+.contact-info-shortcode .content-row:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 19, contact_info.less */
+.contact-info-shortcode svg path,
+.contact-info-shortcode svg rect,
+.contact-info-shortcode svg polygon {
+  fill: #fcd846;
+}
+/* line 23, contact_info.less */
+.contact-info-shortcode svg {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 30, contact_info.less */
+.contact-info-shortcode .text-container {
+  padding-left: 100px;
+  line-height: 75px;
+}
+/* line 34, contact_info.less */
+.contact-info-shortcode .text {
+  font-size: 18px;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #111111;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  /* line 46, contact_info.less */
+  .contact-info-shortcode svg {
+    width: 45px;
+    height: 45px;
+  }
+  /* line 50, contact_info.less */
+  .contact-info-shortcode .text-container {
+    padding-left: 65px;
+    line-height: 45px;
+  }
+}

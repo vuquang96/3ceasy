@@ -1,0 +1,45 @@
+/** fonts **/
+/** Primary and secondary fonts settings **/
+/** Body colors **/
+/** Header colors **/
+/** body background **/
+/** wrapper background **/
+/** footer first widget area background **/
+/** footer second widget area background **/
+/** Footer colors **/
+/* line 7, testimonials.less */
+.shortcode-testimonials .fs-carousel-controls {
+  display: none !important;
+}
+/* line 10, testimonials.less */
+.shortcode-testimonials .fs-carousel-pagination.fs-carousel-visible {
+  bottom: -28px;
+  left: 50px;
+  width: auto;
+}
+/* line 15, testimonials.less */
+.shortcode-testimonials .fs-carousel-page {
+  background: #e1e1e1;
+  height: 2px;
+  border-radius: 0;
+}
+/* line 20, testimonials.less */
+.shortcode-testimonials .fs-carousel-page.fs-carousel-active {
+  background: #fcd846;
+}
+/* line 23, testimonials.less */
+.shortcode-testimonials .fs-carousel-canister {
+  height: auto !important;
+}
+/* line 26, testimonials.less */
+.shortcode-testimonials .photo img {
+  width: 80px;
+}
+/* line 32, testimonials.less */
+.shortcode-testimonials.style-boxed .fs-carousel-pagination.fs-carousel-visible {
+  left: 100px;
+}
+/* line 37, testimonials.less */
+.shortcode-testimonials.style-small_photo .fs-carousel-pagination.fs-carousel-visible {
+  left: 55px;
+}

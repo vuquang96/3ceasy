@@ -1,0 +1,35 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.theme-shop-tabs {
+	.title, .product-price .amount {
+		.decrease-font-size( @h6_font_font_size, 4 );
+		line-height: 1.35em;
+	}
+	.title {
+		color: @color_accent_black;
+	}
+	.title:hover {
+		color: @color_accent_yellow;
+	}
+	ins {
+		text-decoration: none;
+	}
+	.product-thumb {
+		img {
+			display: block;
+			margin-bottom: 25px;
+		}
+	}
+	.product-thumb:hover img {
+		opacity: 0.5;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.theme-shop-tabs .col {
+		margin-bottom: 25px;
+	}
+}

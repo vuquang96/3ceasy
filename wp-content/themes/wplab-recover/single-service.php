@@ -2,7 +2,7 @@
 	$header_style = wplab_recover_front::get_header_style();
 	get_header( $header_style );
 	
-$site_key    = '6LcmBS4UAAAAALCnGWjQB2CIWU2HcMPPHdOlS2Dp';
+$site_key    = get_option('nws_site_key', "");
 
 session_start();    
 $message = '';
@@ -10,10 +10,8 @@ if(isset($_SESSION['flash_messages'])){
 	$message = $_SESSION['flash_messages'];
 	unset($_SESSION['flash_messages']);
 }
-$currency = '';
-if(function_exists('get_woocommerce_currency_symbol')){
-	$currency = get_woocommerce_currency_symbol();
-}
+
+
 $total = get_post_meta(get_the_ID() ,"service-price", true);
 if(function_exists('wc_price')){
 	$total = wc_price(get_post_meta(get_the_ID() ,"service-price", true));
@@ -124,7 +122,10 @@ if(function_exists('wc_price')){
 
 			  <p class="text-danger">Please be authentic</p>	
 			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-4">
+			    <div class="col-sm-2">
+			      <button type="button" class="btn-check btn btn-default"><a href="javascript:history.go(-1)">Back</a></button>
+				</div>
+			    <div class="col-sm-4">
 			      <button type="button" class="btn-check btn btn-default">Submit Order</button>
 			      <button type="submit" class="btn-submit-service btn btn-default">Submit</button>
 			    </div>
@@ -133,18 +134,5 @@ if(function_exists('wc_price')){
 		</div>
 	</div><!-- end of row -->
 </div><!-- end of container -->
-
-
-<table>
-	<thead><h3>Customer information :</h3></thead>
-	<tr><td><b>Name Customer :</b> <span>Khach hang 3</span></td></tr>
-	<tr><td><b>Symptom :</b> <span>iphone 4</span></td></tr>
-	<tr><td><b>Service :</b> <span>iphone 4</span></td></tr>
-	<tr><td><b>Phone :</b> <span>0989989999</span></td></tr>
-	<tr><td><b>Store :</b> <span>store 1 - long biên, hà nội</span></td></tr>
-	<tr><td><b>Date :</b> <span>2017-08-29</span></td></tr>
-	<tr><td><b>Amount of money :</b> <span style="color: blue">500000.004</span></td></tr>
-</table>
-
 
 <?php get_footer(); 

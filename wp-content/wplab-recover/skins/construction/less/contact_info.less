@@ -1,0 +1,55 @@
+// theme vars
+@import "vars.less";
+// LESS functions 
+@import "../../../css/mixins.less";
+
+.contact-info-shortcode {
+	.content-row {
+		border-bottom: 1px solid @color_accent_grey;
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		position: relative;
+		min-height: 75px;
+	}
+	.content-row:last-of-type {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+	svg {
+		path, rect, polygon {
+			fill: @color_accent_yellow;
+		}
+	}
+	svg {
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.text-container {
+		padding-left: 100px;
+		line-height: 75px;
+	}
+	.text {
+		.increase-font-size( @primary_font_font_size, 2);
+		.decrease-lineHeight( @primary_font_line_height, 4 );
+		display: inline-block;
+		vertical-align: middle;
+		color: @color_accent_black;
+		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: 480px) { 
+	.contact-info-shortcode {
+		svg {
+			width: 45px;
+			height: 45px;
+		}
+		.text-container {
+			padding-left: 65px;
+			line-height: 45px;
+		}
+	}
+}
