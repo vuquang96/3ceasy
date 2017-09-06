@@ -65,7 +65,7 @@ class Newwave{
                   `id` mediumint(9) NOT NULL AUTO_INCREMENT,
                   `service` varchar(100) NOT NULL,
                   `category` varchar(100) NOT NULL,
-                  `total` int NOT NULL,
+                  `total` varchar(100) NOT NULL,
                   `name_customer` text NOT NULL,
                   `phone_number` varchar(20) NOT NULL,
                   `store` varchar(150) NOT NULL,

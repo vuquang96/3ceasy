@@ -62,12 +62,12 @@
     public function get_columns(){
         $columnHeader = array(
             'stt'               => 'STT',
-            'service'           => __( 'Service', NEWWAVE_DOMAIN ),
-            'store'             => __( 'Store', NEWWAVE_DOMAIN ),
-            'total'             => __( 'Total', NEWWAVE_DOMAIN ),
-            'name'              => __( 'Name', NEWWAVE_DOMAIN ),
-            'phone_number'      => __( 'Phone Number', NEWWAVE_DOMAIN ),
-            'time'              => __( 'Time', NEWWAVE_DOMAIN ),
+            'service'           => __( 'Dịch vụ', NEWWAVE_DOMAIN ),
+            'store'             => __( 'Cửa hàng', NEWWAVE_DOMAIN ),
+            'total'             => __( 'Tổng tiền', NEWWAVE_DOMAIN ),
+            'name'              => __( 'Tên', NEWWAVE_DOMAIN ),
+            'phone_number'      => __( 'Số điện thoại', NEWWAVE_DOMAIN ),
+            'time'              => __( 'Thời gian', NEWWAVE_DOMAIN ),
             'category'          => __( 'Category', NEWWAVE_DOMAIN ),
             'email'             => __( 'Email', NEWWAVE_DOMAIN ),
         );
@@ -114,9 +114,6 @@
     }
 
     public function column_total($item){
-        if(function_exists('wc_price')){
-            return wc_price($item['total']);
-        }
         return $item['total'];
     }
 

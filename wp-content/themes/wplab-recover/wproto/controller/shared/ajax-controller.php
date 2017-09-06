@@ -431,7 +431,7 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 	            	
 					$xhtml .= '<a  class="col-lg-4 messinfo" href="'. $value->guid .'">'
 					 		. '<span class="text">' .  $value->post_title . '</span>'
-					 		. '<span class="price">' .  $price . '</span>'
+					 		. '<span class="price"> ' .  $price . '</span>'
 					 		. '</a>';
 	            }
 			}else{
