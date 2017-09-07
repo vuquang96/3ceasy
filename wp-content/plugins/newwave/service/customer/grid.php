@@ -126,7 +126,8 @@
     }
 
     public function column_time($item){
-        $time = strtotime($item['time']);
-        return date('d/m/Y', $time);
+        $time   = strtotime($item['time']);
+        $hours  = $item['hours'];
+        return date('d/m/Y', $time) . " - " . $hours;
     }
 }

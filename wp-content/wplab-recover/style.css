@@ -73,7 +73,7 @@
 
 							/*=== Service Template ===*/
 .nws-service{
-	margin: 20px 0px;
+	margin: 0px;
 }
 .nws-service .row{
 	margin-bottom: 25px;
@@ -82,13 +82,14 @@
 	background-color: #f7f7f7;
 }
 .nws-service .title{
-    padding-bottom: 8px;
     color: #333;
     font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
     display: none;
 }
-.nws-service .nws-brand .title{
-	display: block;
+.nws-service .brand-title{
+	display: inline-block;
 }
 .nws-service .item{
 	width: 130px;
@@ -142,15 +143,43 @@
 	border-radius: 3px;
 }
 .nws-service .item:hover img{display: none;}
+.repair-select{
+	margin: 30px 0px;
+}
+.repair-select p{
+	text-align: center;
+	margin: 0px;
+}
+.repair-select p img{
+	width: 100px;
+}
+.repair-select .title{
+	text-align: center;
+    border-bottom: none;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+.repair-select p{
+    line-height: 16px;
+	font-size: 14px;
+    color: #999;
+}
 
+
+
+							/*=== Single service ===*/
+.single-service{
+	margin-bottom: 25px;
+}
+.single-service .breadcrumbs{display: none;}
+.single-service form button a{color: #fff;}
 .single-service .main-info{
 	border: 1px solid #F26522;
 	padding: 25px;
     border-top-width: 5px; 
 }
 
-
-							/*=== Single service ===*/
 .single-service .main-info .total-box {
 	text-align: right;
 	font-size: 24px;
@@ -168,7 +197,10 @@
 	background: #fff; 
 }
 .single-service .select-store .fs-dropdown-options,
-.single-service .select-store button{
+.single-service .select-store button,
+.single-service .select-hours .fs-dropdown-options,
+.single-service .select-hours button
+{
 	display: none;
 }
 .single-service .main-select select{
@@ -192,3 +224,4 @@
     font-size: 22px;
     font-family: cursive;
 }
+

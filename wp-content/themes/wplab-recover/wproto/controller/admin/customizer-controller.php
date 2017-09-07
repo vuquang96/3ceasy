@@ -206,12 +206,13 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 	        			"phone_number" 	=> $_POST['phone'],
 	        			"store" 		=> $_POST['store'],
 	        			"time" 			=> $_POST['date'],
+	        			"hours" 		=> $_POST['hours'],
 	        			"email_store" 	=> $_POST['email_store'],
 	        			"email" 		=> $_POST['email'],
 	        		);
 	        	$result = $wpdb->insert($table, $data);
 	        	if($result){
-	        		$_SESSION['flash_messages'] = __("Order successful, you have an email please check it. thank you !", 'wplab-recover');
+	        		$_SESSION['flash_messages'] = __("Đặt hàng thành công, bạn có một email vui lòng kiểm tra nó. cảm ơn bạn !", 'wplab-recover');
 	        		$time = strtotime($_POST['date']);
         			$date = date('d/m/Y', $time);
         			$total = $_POST['total'];
@@ -219,14 +220,15 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 	        		// Store
 	        		$headers = array('Content-Type: text/html; charset=UTF-8');
 $mailMessage = '<table>
-					<thead><h3>Customer information :</h3></thead>
-					<tr><td><b>Name Customer :</b> <span>'.$_POST['name'].'</span></td></tr>
-					<tr><td><b>Symptom :</b> <span>'.$_POST['category'].'</span></td></tr>
-					<tr><td><b>Service :</b> <span>'.$_POST['service'].'</span></td></tr>
-					<tr><td><b>Phone :</b> <span>'.$_POST['phone'].'</span></td></tr>
-					<tr><td><b>Store :</b> <span>'.$_POST['store'].'</span></td></tr>
-					<tr><td><b>Date :</b> <span>'.$date.'</span></td></tr>
-					<tr><td><b>Amount of money :</b> <span style="color: blue">'.$total.'</span></td></tr>
+					<thead><h3>Thông tin khách hàng :</h3></thead>
+					<tr><td><b>Tên khách hàng :</b> <span>'.$_POST['name'].'</span></td></tr>
+					<tr><td><b>Triệu chứng :</b> <span>'.$_POST['category'].'</span></td></tr>
+					<tr><td><b>Dịch vụ :</b> <span>'.$_POST['service'].'</span></td></tr>
+					<tr><td><b>Số điện thoại :</b> <span>'.$_POST['phone'].'</span></td></tr>
+					<tr><td><b>Cửa hàng :</b> <span>'.$_POST['store'].'</span></td></tr>
+					<tr><td><b>Ngày :</b> <span>'.$date.'</span></td></tr>
+					<tr><td><b>Giờ :</b> <span>'.$_POST['hours'].'</span></td></tr>
+					<tr><td><b>Tổng số tiền :</b> <span style="color: blue">'.$total.'</span></td></tr>
 				</table>';
 					wp_mail($_POST['email_store'], "Store", $mailMessage, $headers);
 
@@ -234,10 +236,10 @@ $mailMessage = '<table>
 					wp_mail($_POST['email'], "Store", $mailMessage, $headers);
 
 	        	}else{
-	        		$_SESSION['flash_messages'] = __("Sorry, there was an error. Please try again !", 'wplab-recover');
+	        		$_SESSION['flash_messages'] = __("Xin lỗi, đã xảy ra lỗi. Vui lòng thử lại !", 'wplab-recover');
 	        	}
 		    }else{
-		    	$_SESSION['flash_messages'] = __("Sorry, there was an error. Please try again !", 'wplab-recover');
+		    	$_SESSION['flash_messages'] = __("Xin lỗi, đã xảy ra lỗi. Vui lòng thử lại !", 'wplab-recover');
 		    }
 		    wp_redirect($_POST['url_back']);
 		}

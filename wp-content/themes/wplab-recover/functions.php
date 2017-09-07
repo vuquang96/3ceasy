@@ -13,3 +13,11 @@
 	$wplab_recover_core = new wplab_recover_core_controller();
 	$wplab_recover_core->run();
 
+	function post_change_url($old_url, $new_url) {
+	    global $wpdb;
+	    $wpdb->query("UPDATE $wpdb->posts SET post_content = (REPLACE (post_content, '$old_url', '$new_url'))");
+	    $wpdb->query("UPDATE $wpdb->posts SET guid = (REPLACE (guid, '$old_url', '$new_url'))");
+	}
+	//post_change_url("http://new.vn", "http://new.vn/3ceasy");
+	//post_change_url("https://localhost", "http://new.vn");
+

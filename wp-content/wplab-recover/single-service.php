@@ -13,10 +13,6 @@ if(isset($_SESSION['flash_messages'])){
 
 
 $total = get_post_meta(get_the_ID() ,"service-price", true);
-if(function_exists('wc_price')){
-	$total = wc_price(get_post_meta(get_the_ID() ,"service-price", true));
-}
-echo get_template_directory_uri();
 ?>
 <div class="container">
 	<div class="row single-service">
@@ -25,33 +21,33 @@ echo get_template_directory_uri();
             <div class="info">
                 <table class="repair-listTab" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
-                    	<thead><?php esc_html_e( 'Your maintenance program :', 'wplab-recover' ); ?></thead>
+                    	<thead><?php esc_html_e( 'Chương trình bảo trì của bạn :', 'wplab-recover' ); ?></thead>
                         <tr>
-                            <td><span><?php esc_html_e( 'Brand :', 'wplab-recover' ); ?></span> </td>
+                            <td><span><?php esc_html_e( 'Thương hiệu :', 'wplab-recover' ); ?></span> </td>
                             <td><span class="brand">None</span></td>
                         </tr>
                         <tr>
-                            <td><span><?php esc_html_e( 'Type of device :', 'wplab-recover' ); ?></span> </td>
+                            <td><span><?php esc_html_e( 'Loại thiết bị :', 'wplab-recover' ); ?></span> </td>
                             <td><span class="device">None</span></td>
                         </tr>
                         <tr>
-                            <td><span><?php esc_html_e( 'Symptom :', 'wplab-recover' ); ?></span></td>
+                            <td><span><?php esc_html_e( 'Triệu chứng :', 'wplab-recover' ); ?></span></td>
                             <td><span class="symptom">None</span></td>
                         </tr>
                         <tr>
-                            <td><span><?php esc_html_e( 'Maintenance mode :', 'wplab-recover' ); ?></span></td>
+                            <td><span><?php esc_html_e( 'Chế độ bảo trì :', 'wplab-recover' ); ?></span></td>
                             <td><span class="maintenance"><?php echo get_the_title() ?></span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="total-box">
-                <?php esc_html_e( 'Amount of money :', 'wplab-recover' ); ?> 
+                <?php esc_html_e( 'Tổng số tiền :', 'wplab-recover' ); ?> 
                 <span><?php  echo $total ?></span>
             </div>
         </div>
 		<div class="col-lg-7 main-select">
-			<form action="<?php echo esc_url( admin_url('admin-post.php'), is_ssl() ); ?>" method="POST">
+			<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
 				<input type="hidden" name="email_store" class="email_store" >
 				<input type="hidden" name="action" value="nws_customer">
 				<input type="hidden" name="category" >
@@ -60,14 +56,14 @@ echo get_template_directory_uri();
 				<input type="hidden" name="url_back" value="<?php echo get_permalink(get_the_ID()) ?>">
 
 			  <div class="item">
-			    <label class="col-sm-4">Name :</label>
+			    <label class="col-sm-4">Tên :</label>
 			    <div class="col-sm-8">
 			      <input type="text" name="name" >
 			    </div>
 			  </div>
 
 			  <div class="item">
-			    <label class="col-sm-4">Phone :</label>
+			    <label class="col-sm-4">Số điện thoại :</label>
 			    <div class="col-sm-8">
 			      <input type="number" name="phone" >
 			    </div>
@@ -81,14 +77,14 @@ echo get_template_directory_uri();
 			  </div>
 
 			  <div class="item">
-			    <label class="col-sm-4">Current location :</label>
+			    <label class="col-sm-4">Địa điểm hiện tại :</label>
 			    <div class="col-sm-8">
 			      <input type="text" name="local" class="current-location" >
 			    </div>
 			  </div>
 
 			  <div class="item select-store">
-			    <label class="col-sm-4">Choosing a repair shop :</label>
+			    <label class="col-sm-4">Chọn cửa hàng sửa chữa:</label>
 			    <div class="col-sm-8">
 			      	<select name="store">
 					  	<option value="0">-- Select --</option>
@@ -106,9 +102,18 @@ echo get_template_directory_uri();
 				}
 			?>
 			  <div class="item">
-			    <label class="col-sm-4">Select time :</label>
+			    <label class="col-sm-4">Chọn ngày :</label>
 			    <div class="col-sm-8">
 			      	<input type="date" name="date" min="<?php echo $dateMin ?>" max="<?php echo $dateMax?>">
+			    </div>
+			  </div>
+
+			  <div class="item select-hours">
+			    <label class="col-sm-4">Chọn giờ :</label>
+			    <div class="col-sm-8">
+			      	<select name="hours">
+					  	<option value="0">-- Select --</option>
+					</select>
 			    </div>
 			  </div>
 
@@ -120,10 +125,13 @@ echo get_template_directory_uri();
 				</div>
 
 
-			  <p class="text-danger">Please be authentic</p>	
+			  <p class="text-danger">Xin hãy xác thực!</p>	
 			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-4">
-			      <button type="button" class="btn-check btn btn-default">Submit Order</button>
+			    <div class="col-sm-2">
+			      <button type="button" class="btn-check btn btn-default"><a href="javascript:history.go(-1)">Back</a></button>
+				</div>
+			    <div class="col-sm-4">
+			      <button type="button" class="btn-check btn btn-default">Đặt hàng</button>
 			      <button type="submit" class="btn-submit-service btn btn-default">Submit</button>
 			    </div>
 			  </div>

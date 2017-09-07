@@ -25,6 +25,7 @@ jQuery(document).ready(function($){
 		var local = $(".single-service input[name='local']").val();
 		var store = $(".single-service select[name='store']").val();
 		var date = $(".single-service input[name='date']").val();
+		var house = $(".single-service .select-hours select").val();
 		var capcha = $("#recaptcha-anchor").attr("aria-checked");
 		var response = grecaptcha.getResponse();
 
@@ -71,6 +72,13 @@ jQuery(document).ready(function($){
 			$(".single-service input[name='date']").removeClass("service-danger");
 		}
 
+		if(house == "0"){
+			flag = true;
+			$(".single-service .select-hours select").addClass("service-danger");
+		}else{
+			$(".single-service .select-hours select").removeClass("service-danger");
+		}
+
 		if(response.length == 0){
 		    $(".single-service .text-danger").css("display", "block");
 		}else{
@@ -79,6 +87,56 @@ jQuery(document).ready(function($){
 		    	$(".single-service .btn-submit-service").trigger("click");
 		    }
 		}
+	});
+
+
+	// Hours
+	$(".single-service input[name='date']").change(function(){
+		var dateSelect  = new Date($(this).val());
+		var dateCurrent = new Date();
+		
+		var xhtml = '<option class="option-hours" value="0">-- Select --</option>';
+		
+		if(dateSelect > dateCurrent){
+			var temp = 1;
+			for (var i = 8; i < 17; i += 2) {
+				var to = i + 2;
+				xhtml += '<option value="'+ i +':00-'+ to +':00">'+ i +':00-'+ to +':00</option>';
+				temp++;
+				if(temp == 3) i++;
+			}
+		}else{
+			var hours = dateCurrent.getHours();
+			if(hours <= 8){
+				for (var i = 8; i < 17; i += 2) {
+					var to = i + 2;
+					xhtml += '<option value="'+ i +':00-'+ to +':00">'+ i +':00-'+ to +':00</option>';
+					temp++;
+					if(temp == 3) i++;
+				}
+			}else if(hours > 8 && hours < 10) {
+				var temp = 2;
+				for (var i = 10; i < 17; i += 2) {
+					var to = i + 2;
+					xhtml += '<option value="'+ i +':00-'+ to +':00">'+ i +':00-'+ to +':00</option>';
+					temp++;
+					if(temp == 3) i++;
+				}
+			}else if(hours > 10 && hours < 13) {
+				for (var i = 13; i < 17; i += 2) {
+					var to = i + 2;
+					xhtml += '<option value="'+ i +':00-'+ to +':00">'+ i +':00-'+ to +':00</option>';
+				}
+			}else if(hours > 13 && hours < 15) {
+				for (var i = 15; i < 17; i += 2) {
+					var to = i + 2;
+					xhtml += '<option value="'+ i +':00-'+ to +':00">'+ i +':00-'+ to +':00</option>';
+				}
+			}
+		}
+		
+		$(".single-service .select-hours select").empty();
+		$(".single-service .select-hours select").html(xhtml);
 	});
 
 });

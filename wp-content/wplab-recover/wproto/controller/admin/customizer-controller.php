@@ -17,6 +17,7 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 		add_action( 'wp_ajax_wproto_save_style_version', array( $this, 'save_style_version' ) );
 
 		// Service single 
+		add_action( 'admin_post_nws_customer', array($this, 'order_service') );
 		add_action( 'admin_post_nopriv_nws_customer', array($this, 'order_service') );
 		
 	}
@@ -214,9 +215,7 @@ class wplab_recover_customizer_controller extends wplab_recover_core_controller 
 	        		$time = strtotime($_POST['date']);
         			$date = date('d/m/Y', $time);
         			$total = $_POST['total'];
-					if(function_exists('wc_price')){
-						$total = wc_price($total);
-					}
+
 	        		// Store
 	        		$headers = array('Content-Type: text/html; charset=UTF-8');
 $mailMessage = '<table>

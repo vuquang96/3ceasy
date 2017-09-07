@@ -33,6 +33,7 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 		// Load Store service
 		add_action( 'wp_ajax_nopriv_load_store_service', array( $this, 'load_store_service' ) );
 		add_action( 'wp_ajax_load_store_service', array( $this, 'load_store_service' ) );
+
 	}
 
 	/**
@@ -407,6 +408,7 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 	 * Load Category Service
 	 **/
 	function load_category_service() {
+
 		$xhtml = '';
 		if(isset($_POST['id_term'])){
 			if(isset($_POST['service'])){
@@ -425,9 +427,6 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 	            $service = new \WP_Query( $query );
 	            foreach ($service->posts as  $value) {
 	            	$price = get_post_meta($value->ID, 'service-price', true);
-					if(function_exists('wc_price')){
-						$price = wc_price($price);
-					}
 	            	
 					$xhtml .= '<a  class="col-lg-4 messinfo" href="'. $value->guid .'">'
 					 		. '<span class="text">' .  $value->post_title . '</span>'
@@ -455,6 +454,7 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 	 * Load Store Service
 	 **/
 	function load_store_service() {
+
 		$xhtml = '';
 		if(isset($_POST['local'])){
 			 $address = urlencode ($_POST['local']);
@@ -473,9 +473,7 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 		    $lng = $response_a->results[0]->geometry->location->lng;
 		    	
 	    	
-	    	//$urlApiStore = get_site_url() . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
-
-	    	$urlApiStore = "http://new.vn/3ceasy" . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
+	    	$urlApiStore = get_site_url() . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
 
 	    	$dataApi = json_decode(file_get_contents($urlApiStore), true);
 

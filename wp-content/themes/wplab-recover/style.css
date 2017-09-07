@@ -166,7 +166,12 @@
     color: #999;
 }
 
-
+.nws-service .nws-model-service a span.price{
+	color: #8dc63f !important;
+	display: block;
+    float: none;
+    margin-bottom: 5px;
+}
 
 							/*=== Single service ===*/
 .single-service{

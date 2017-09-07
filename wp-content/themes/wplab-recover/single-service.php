@@ -11,7 +11,6 @@ if(isset($_SESSION['flash_messages'])){
 	unset($_SESSION['flash_messages']);
 }
 
-
 $total = get_post_meta(get_the_ID() ,"service-price", true);
 ?>
 <div class="container">
@@ -101,21 +100,22 @@ $total = get_post_meta(get_the_ID() ,"service-price", true);
 					$dateMin = date("Y-m-d", time());
 				}
 			?>
-			  <div class="item">
-			    <label class="col-sm-4">Chọn ngày :</label>
-			    <div class="col-sm-8">
-			      	<input type="date" name="date" min="<?php echo $dateMin ?>" max="<?php echo $dateMax?>">
-			    </div>
-			  </div>
+			  	<div class="item">
+			    	<label class="col-sm-4">Chọn ngày :</label>
+			    	<div class="col-sm-8">
+			      		<input type="date" name="date" min="<?php echo $dateMin ?>" max="<?php echo $dateMax?>">
+			    	</div>
+			  	</div>
 
-			  <div class="item select-hours">
-			    <label class="col-sm-4">Chọn giờ :</label>
-			    <div class="col-sm-8">
-			      	<select name="hours">
-					  	<option value="0">-- Select --</option>
-					</select>
-			    </div>
-			  </div>
+			  	<div class="item select-hours">
+				    <label class="col-sm-4">Chọn giờ :</label>
+				    <div class="col-sm-8">
+				      	<select name="hours">
+						  	<option class="option-hours" value="0">-- Select --</option>
+						</select>
+				    </div>
+				</div>
+
 
  				<script src='https://www.google.com/recaptcha/api.js'></script>
 				<div class="form-group">
@@ -127,10 +127,10 @@ $total = get_post_meta(get_the_ID() ,"service-price", true);
 
 			  <p class="text-danger">Xin hãy xác thực!</p>	
 			  <div class="form-group">
-			    <div class="col-sm-2">
-			      <button type="button" class="btn-check btn btn-default"><a href="javascript:history.go(-1)">Back</a></button>
+			    <div class="col-sm-3">
+			      <button type="button" class="btn-check btn btn-default"><a href="javascript:history.go(-1)">Quay lại</a></button>
 				</div>
-			    <div class="col-sm-4">
+			    <div class="col-sm-3">
 			      <button type="button" class="btn-check btn btn-default">Đặt hàng</button>
 			      <button type="submit" class="btn-submit-service btn btn-default">Submit</button>
 			    </div>

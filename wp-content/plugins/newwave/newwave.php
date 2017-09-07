@@ -70,6 +70,7 @@ class Newwave{
                   `phone_number` varchar(20) NOT NULL,
                   `store` varchar(150) NOT NULL,
                   `time` date NOT NULL,
+                  `hours` varchar(20) NOT NULL,
                   `email_store` varchar(100) NOT NULL,
                   `email` varchar(100) NOT NULL,
                   UNIQUE KEY id (`id`)
