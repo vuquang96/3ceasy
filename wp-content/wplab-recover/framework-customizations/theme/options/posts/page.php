@@ -602,7 +602,8 @@ $options = array(
 											'bottom_bar_content' => array(
 										    'type'  => 'wp-editor',
 										    'label' => esc_html__('Bottom Bar Content', 'wplab-recover'),
-										    'value'  => '<p style="text-align: center;">&copy;2016&nbsp;Recover WordPress Theme.</p><p style="text-align: center;">Developed by <a href="http://themeforest.net/user/wplab/?ref=wplab">WPlab.Pro</a> / Designed by <a href="http://themeforest.net/user/themefire/?ref=wplab">ThemeFire</a></p>',
+										    'value'  => '<p style="text-align: center;">&copy;2017&nbsp;<a href="https://3ceasy.newwave.vn/" target="_blank" rel="noopener"><strong>3C easy Vietnam</strong></a>
+											    	</p><p style="text-align: center;">Developed by &nbsp;<a href="http://newwave.vn/">newwave.vn</a></p>',
 										    'tinymce' => true,
 										    'media_buttons' => false,
 										    'teeny' => true,

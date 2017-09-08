@@ -455,7 +455,7 @@
 			
 			// If Unyson Framework is active and Footer Widgets Area is enabled
 			if( wplab_recover_utils::is_unyson() ) {
-			
+				
 				$custom_page_footer = is_page() && filter_var( fw_get_db_post_option( get_the_ID(), 'customize_page_footer/enabled' ), FILTER_VALIDATE_BOOLEAN );
 				
 				if( $custom_page_footer ) {
@@ -475,7 +475,13 @@
 					$footer2_columns = fw_get_db_settings_option( 'footer_side2_display_widgets/true/footer_side2_columns' );
 					$footer_side2_widget_area = fw_get_db_settings_option( 'footer_side2_display_widgets/true/footer_side2_area' );
 				}
-			
+
+				$footer_side_display_widgets = "";
+				$footer_columns = 2 ;
+				$footer_side_widget_area = "sidebar-footer-primary";
+				$footer_side2_display_widgets = 1;
+				$footer2_columns = 4;
+				$footer_side2_widget_area = "sidebar-footer-third";
 				if( $footer_side_display_widgets ) {
 					?>
 					<div id="footer-widgets-2" class="footer-widgets footer-widget-area-2">
@@ -531,6 +537,12 @@
 					$menu = fw_get_db_settings_option( 'display_bottom_bar/true/bottom_bar_style/text_menu/bottom_bar_menu' );
 					$gotop = fw_get_db_settings_option( 'go_top' );
 				}
+				$custom_page_footer = 1;
+				$display_bottom_bar = 1;
+				$bottom_bar_style = 'text';
+				$menu = "";
+				$gotop = "bottom_center";
+
 				if( $display_bottom_bar ):
 			?>
 			<div id="bottom-bar">
@@ -539,7 +551,14 @@
 						<div class="<?php echo $bottom_bar_style == 'text' ? 'col-md-12' : 'col-md-8'; ?>">
 							<?php
 								if( $custom_page_footer ) {
-									echo fw_get_db_post_option( get_the_ID(), 'customize_page_footer/true/display_bottom_bar/true/bottom_bar_content' );
+									$bottom_bar =  fw_get_db_post_option( get_the_ID(), 'customize_page_footer/true/display_bottom_bar/true/bottom_bar_content' );
+									if($bottom_bar){
+										echo $bottom_bar;
+									}else{
+										echo '<p style="text-align: center;">&copy;2017&nbsp;<a href="https://3ceasy.newwave.vn/" target="_blank" rel="noopener"><strong>3C easy Vietnam</strong></a>
+											    	</p><p style="text-align: center;">Developed by &nbsp;<a href="http://newwave.vn/">newwave.vn</a></p>';
+									}
+									
 								} else {
 									echo fw_get_db_settings_option( 'display_bottom_bar/true/bottom_bar_content' );
 								}
@@ -580,7 +599,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<p>&copy;<?php echo date('Y'); ?> <?php echo esc_html( get_bloginfo('name') ); ?></p>
-							<p>Developed by <a href="http://themeforest.net/user/wplab/?ref=wplab">WPlab.Pro</a> / Designed by <a href="http://themeforest.net/user/themefire/?ref=wplab">ThemeFire</a></p>
+							
 						</div>
 					</div>
 				</div>

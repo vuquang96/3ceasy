@@ -12,7 +12,7 @@
 			} else {
 				$footer_bar_style = fw_get_db_settings_option( 'footer_bar/style' );
 			}
-
+			$footer_bar_style = 'hidden' ;
 			if( $footer_bar_style != 'hidden' ):
 		?>
 		<!--
@@ -193,12 +193,7 @@
 
 	</div><!-- End of primary wrapper -->
 
-	<?php if( defined('WPROTO_DEMO_STAND') && WPROTO_DEMO_STAND ): ?>
-	<div id="demo-stand">
-		<a href="https://themeforest.net/item/construction-building-business-wordpress-theme-recover/15237991?ref=wplab&license=regular&open_purchase_for_item_id=15237991" target="_blank" title="Purchase via ThemeForest" class="purchase"></a>
-		<a href="https://themeforest.net/item/construction-building-business-wordpress-theme-recover/15237991?ref=wplab" title="View this theme on ThemeForest" target="_blank" class="tf"></a>
-	</div>
-	<?php endif; ?>
+	
 
 	<?php
 		/**
