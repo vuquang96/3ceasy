@@ -72,26 +72,7 @@
 	<div class="row repair-select">
 	    <div class="col-lg-10 col-lg-offset-1 repair-wapper">
 	        <div class="repair-four">
-	            <div class="col-md-3">
-	                <p><img src="<?php echo get_template_directory_uri() . "/images/service/service-bottom1.png" ?>" alt="" /></p>
-	                <div class="title">180 ngày bảo hành clearly-</div>
-	                <p>Hãy yên tâm rằng việc sửa chữa bảo hành tiêu dùng quốc gia</p>
-	            </div>
-	            <div class="col-md-3">
-	                <p><img src="<?php echo get_template_directory_uri() . "/images/service/service-bottom2.png" ?>" alt="" /></p>
-	                <div class="title">180 ngày bảo hành clearly-</div>
-	                <p>Hãy yên tâm rằng việc sửa chữa bảo hành tiêu dùng quốc gia</p>
-	            </div>
-	            <div class="col-md-3">
-	                <p><img src="<?php echo get_template_directory_uri() . "/images/service/service-bottom3.png" ?>" alt="" /></p>
-	                <div class="title">180 ngày bảo hành clearly-</div>
-	                <p>Hãy yên tâm rằng việc sửa chữa bảo hành tiêu dùng quốc gia</p>
-	            </div>
-	            <div class="col-md-3">
-	                <p><img src="<?php echo get_template_directory_uri() . "/images/service/service-bottom4.png" ?>" alt="" /></p>
-	                <div class="title">180 ngày bảo hành clearly-</div>
-	                <p>Hãy yên tâm rằng việc sửa chữa bảo hành tiêu dùng quốc gia</p>
-	            </div>
+	            <?php echo the_content() ?>
 	        </div>
 	    </div>
 	</div>

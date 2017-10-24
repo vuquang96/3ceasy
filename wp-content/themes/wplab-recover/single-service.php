@@ -41,7 +41,7 @@ $total = get_post_meta(get_the_ID() ,"service-price", true);
                 </table>
             </div>
             <div class="total-box">
-                <?php esc_html_e( 'Tổng số tiền :', 'wplab-recover' ); ?> 
+                <?php esc_html_e( 'Tổng số tiền dự kiến :', 'wplab-recover' ); ?> 
                 <span><?php  echo $total ?></span>
             </div>
         </div>
@@ -55,14 +55,14 @@ $total = get_post_meta(get_the_ID() ,"service-price", true);
 				<input type="hidden" name="url_back" value="<?php echo get_permalink(get_the_ID()) ?>">
 
 			  <div class="item">
-			    <label class="col-sm-4">Tên :</label>
+			    <label class="col-sm-4">Tên(<span style="color: red">*</span>) :</label>
 			    <div class="col-sm-8">
 			      <input type="text" name="name" >
 			    </div>
 			  </div>
 
 			  <div class="item">
-			    <label class="col-sm-4">Số điện thoại :</label>
+			    <label class="col-sm-4">Số điện thoại(<span style="color: red">*</span>) :</label>
 			    <div class="col-sm-8">
 			      <input type="number" name="phone" >
 			    </div>
@@ -76,14 +76,14 @@ $total = get_post_meta(get_the_ID() ,"service-price", true);
 			  </div>
 
 			  <div class="item">
-			    <label class="col-sm-4">Địa điểm hiện tại :</label>
+			    <label class="col-sm-4">Địa điểm hiện tại(<span style="color: red">*</span>) :</label>
 			    <div class="col-sm-8">
 			      <input type="text" name="local" class="current-location" >
 			    </div>
 			  </div>
 
 			  <div class="item select-store">
-			    <label class="col-sm-4">Chọn cửa hàng sửa chữa:</label>
+			    <label class="col-sm-4">Chọn Trạm sửa chữa:</label>
 			    <div class="col-sm-8">
 			      	<select name="store">
 					  	<option value="0">-- Select --</option>
@@ -101,7 +101,7 @@ $total = get_post_meta(get_the_ID() ,"service-price", true);
 				}
 			?>
 			  	<div class="item">
-			    	<label class="col-sm-4">Chọn ngày :</label>
+			    	<label class="col-sm-4">Chọn ngày(<span style="color: red">*</span>) :</label>
 			    	<div class="col-sm-8">
 			      		<input type="date" name="date" min="<?php echo $dateMin ?>" max="<?php echo $dateMax?>">
 			    	</div>

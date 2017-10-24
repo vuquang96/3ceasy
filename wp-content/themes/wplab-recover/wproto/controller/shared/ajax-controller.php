@@ -457,23 +457,16 @@ class wplab_recover_ajax_controller extends wplab_recover_core_controller {
 
 		$xhtml = '';
 		if(isset($_POST['local'])){
-			 $address = urlencode ($_POST['local']);
+			$address = urlencode ($_POST['local']);
 		    $url = "http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false&region=India";
-		    $ch = curl_init();
-		    curl_setopt($ch, CURLOPT_URL, $url);
-		    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		    curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
-		    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-		    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-		    $response = curl_exec($ch);
-		    curl_close($ch);
-		    $response_a = json_decode($response);
+		    $locationApi = json_decode(file_get_contents($url), true);
 
-		    $lat = $response_a->results[0]->geometry->location->lat;
-		    $lng = $response_a->results[0]->geometry->location->lng;
+		    $lat = $locationApi['results'][0]['geometry']['location']['lat'];
+		    $lng = $locationApi['results'][0]['geometry']['location']['lng'];
 		    	
 	    	
-	    	$urlApiStore = get_site_url() . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
+	    	//$urlApiStore = get_site_url() . "/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
+	    	$urlApiStore = "http://new.vn/3ceasy/wp-admin/admin-ajax.php?action=store_search&lat=$lat&lng=$lng&max_results=25&search_radius=100";
 
 	    	$dataApi = json_decode(file_get_contents($urlApiStore), true);
 

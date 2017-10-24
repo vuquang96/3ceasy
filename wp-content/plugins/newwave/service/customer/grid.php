@@ -110,7 +110,10 @@
     }
 
     public function column_store($item){
-        return $item['store'];
+        if($item['store'] != "0"){
+            return $item['store'];
+        }
+        return '';
     }
 
     public function column_total($item){
@@ -128,6 +131,9 @@
     public function column_time($item){
         $time   = strtotime($item['time']);
         $hours  = $item['hours'];
-        return date('d/m/Y', $time) . " - " . $hours;
+        if($hours != "0"){
+            return date('d/m/Y', $time) . " <br /> " . $hours;
+        }
+        return date('d/m/Y', $time);
     }
 }

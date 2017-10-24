@@ -555,8 +555,7 @@
 									if($bottom_bar){
 										echo $bottom_bar;
 									}else{
-										echo '<p style="text-align: center;">&copy;2017&nbsp;<a href="https://3ceasy.newwave.vn/" target="_blank" rel="noopener"><strong>3C easy Vietnam</strong></a>
-											    	</p><p style="text-align: center;">Developed by &nbsp;<a href="http://newwave.vn/">newwave.vn</a></p>';
+										echo nws_bottom_bar();
 									}
 									
 								} else {

@@ -238,8 +238,9 @@ class wplab_recover_backend_controller extends wplab_recover_core_controller {
 	 **/
 	function disable_wp_admin_access() {
 		if ( wplab_recover_utils::is_unyson() && filter_var( fw_get_db_settings_option( 'logout_non_admins' ), FILTER_VALIDATE_BOOLEAN ) && ! current_user_can( 'manage_options' ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
-  		wp_redirect( home_url() );
-			exit;
+  		//wp_redirect( home_url() );
+			//exit;
+			// Fix admin_post_nopriv
 		}
 	}
 	

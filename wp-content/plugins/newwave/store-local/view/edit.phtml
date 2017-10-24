@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h1> Update time </h1>
+    <h1> Footer </h1>
     
     <?php if(isset($data['message'])){ ?>
 		<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
@@ -20,13 +20,6 @@
 	            	</td>
 		        </tr>
 
-		    	<tr>
-		            <th><label> Update time (hours) <span style="color:red;">*</span> : </label></th>
-		            <td>
-		            	<input type="number" class="regular-text" name="time" value="<?php echo $data['time']; ?>" />
-		            	<p class="description" id="tagline-description">Default 12 hours (Min 2)</p>
-	            	</td>
-		        </tr>
 	        </tbody>
         </table>
         <input type="submit" name="submit" id="mp-btn-change" class="button button-primary" value="Save Changes">

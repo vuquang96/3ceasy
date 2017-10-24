@@ -18,16 +18,18 @@
 	    $wpdb->query("UPDATE `$wpdb->posts` SET `post_content` = (REPLACE (post_content, '$old_url', '$new_url'))");
 	    $wpdb->query("UPDATE `$wpdb->posts` SET `guid` = (REPLACE (guid, '$old_url', '$new_url'))");
 	}
-	/*post_change_url("https://3ceasy.newwave.vn", "https://3ceasy.vn");
-	post_change_url("http://3ceasy.newwave.vn", "http://3ceasy.vn");*/
 
+	
+
+	function nws_bottom_bar(){
+		return wp_kses_post(get_option("nws_footer_bar", ""));
+	}
 	function change_footer(){
 		global $wpdb;
 		$ids = $wpdb->get_results("SELECT `ID` FROM `$wpdb->posts`", "ARRAY_A" );
 
 
-		$footer = '<p style="text-align: center;">&copy;2017&nbsp;<a href="https://3ceasy.newwave.vn/" target="_blank" rel="noopener"><strong>3C easy Vietnam</strong></a>
-			    	</p><p style="text-align: center;">Developed by &nbsp;<a href="http://newwave.vn/">newwave.vn</a></p>';
+		$footer = nws_bottom_bar();
 		foreach ($ids as $value) {
 			$metaValue = get_post_meta($value['ID'], "fw_options", true);
 			if(isset($metaValue['customize_page_footer']['true']['display_bottom_bar']['true']['bottom_bar_content'])){
@@ -36,5 +38,12 @@
 		 	update_post_meta($value['ID'], "fw_options", $metaValue);
 		}
 	}
-	//change_footer();
+
+	if(get_option("nws_change_domain", 1)){
+		post_change_url("https://3ceasy.newwave.vn", "https://3ceasy.vn");
+		post_change_url("http://3ceasy.newwave.vn", "http://3ceasy.vn");
+		change_footer();
+		update_option("nws_change_domain", 0);
+	}
+	
 

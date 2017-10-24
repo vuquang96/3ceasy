@@ -230,10 +230,22 @@ $mailMessage = '<table>
 					<tr><td><b>Giờ :</b> <span>'.$_POST['hours'].'</span></td></tr>
 					<tr><td><b>Tổng số tiền :</b> <span style="color: blue">'.$total.'</span></td></tr>
 				</table>';
-					wp_mail($_POST['email_store'], "Store", $mailMessage, $headers);
+
+					// Store
+					if($_POST['email_store'] != ""){
+						wp_mail($_POST['email_store'], "Store", $mailMessage, $headers);
+					}else{
+						wp_mail("info@3ceasy.com.vn", "Store", $mailMessage, $headers);
+					}
+					
 
 					// Customer
-					wp_mail($_POST['email'], "Store", $mailMessage, $headers);
+					if(trim($_POST['email']) != ""){
+						wp_mail($_POST['email'], "Store", $mailMessage, $headers);
+					}else{
+						$_SESSION['flash_messages'] = __("Đặt hàng thành công !", 'wplab-recover');
+					}
+					
 
 	        	}else{
 	        		$_SESSION['flash_messages'] = __("Xin lỗi, đã xảy ra lỗi. Vui lòng thử lại !", 'wplab-recover');

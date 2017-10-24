@@ -7,7 +7,6 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php
-	
 		$allowed_tags = wp_kses_allowed_html( 'post' );
 	
 		/**
